@@ -1,0 +1,10 @@
+{
+  "type": "xwalk",
+  "contentHostUrl": "author-p160552-e1944799.adobeaemcloud.com",
+  "previewOrg": "nishant-adobe",
+  "previewSite": "abbvie-rinvoq-eds",
+  "aemSitePath": "/content/multirepo-rinvoq",
+  "aemAssetsFolderPath": "/content/dam/multirepo-rinvoq",
+  "aemSiteName": "multirepo-rinvoq",
+  "aemSiteTitle": "Rrinvoq"
+}
