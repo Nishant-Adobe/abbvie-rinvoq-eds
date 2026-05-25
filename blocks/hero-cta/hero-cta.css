@@ -1,4 +1,4 @@
-/* Hero CTA — SPEAK Network (dark brushstroke background, white text right) */
+/* Hero CTA — SPEAK Network (dark brushstroke background, white text) */
 /* stylelint-disable no-descending-specificity */
 .hero-cta-container .hero-cta-wrapper {
   max-width: unset;
@@ -11,9 +11,10 @@
 
 .hero-cta {
   position: relative;
-  padding: 40px 20px;
-  height: clamp(350px, 35vw, 550px);
+  padding: 150px 20px 30px;
+  min-height: 435px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
@@ -54,14 +55,15 @@
   max-width: none;
 }
 
-/* Text content — right-positioned, white text */
+/* Text content — white text, centered on mobile */
 .hero-cta > div:last-child {
   position: relative;
   z-index: 1;
   color: #fff;
-  width: 55%;
+  width: 100%;
   max-width: 500px;
-  padding: 20px 0;
+  padding: 0;
+  text-align: center;
 }
 
 .hero-cta > div:last-child > div {
@@ -71,7 +73,7 @@
 .hero-cta h1,
 .hero-cta h2 {
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
   margin: 0 0 12px;
@@ -98,7 +100,7 @@
   text-decoration: underline;
 }
 
-/* Email icon — paragraph containing mailto link */
+/* Email icon */
 .hero-cta p a[href^="mailto:"] {
   text-decoration: underline;
   text-decoration-color: #90124a;
@@ -117,7 +119,7 @@
   background-repeat: no-repeat;
 }
 
-/* Phone icon — paragraph containing tel link */
+/* Phone icon */
 .hero-cta p a[href^="tel:"] {
   text-decoration: underline;
   text-decoration-color: #90124a;
@@ -136,7 +138,7 @@
   background-repeat: no-repeat;
 }
 
-/* Reset button auto-decoration — links should be plain white text */
+/* Reset button auto-decoration */
 .hero-cta .button-container {
   margin: 0;
 }
@@ -161,16 +163,21 @@
   text-decoration: underline;
 }
 
-/* Tablet (601px – 984px) */
+/* Tablet (601px+) — text right, 435px height */
 @media (width >= 601px) {
   .hero-cta {
-    height: clamp(400px, 35vw, 550px);
-    padding: 50px 30px;
+    min-height: 435px;
+    padding: 200px 30px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .hero-cta > div:last-child {
-    width: 45%;
-    max-width: 450px;
+    width: 50%;
+    max-width: 500px;
+    text-align: left;
+    padding: 0;
   }
 
   .hero-cta h1,
@@ -189,15 +196,15 @@
   }
 }
 
-/* Desktop (985px+) */
+/* Desktop (985px+) — 380px height, content right */
 @media (width >= 985px) {
   .hero-cta {
-    height: clamp(435px, 35vw, 550px);
+    min-height: 380px;
     padding: 30px 50px;
   }
 
   .hero-cta > div:last-child {
-    width: 40%;
+    width: 45%;
     max-width: 500px;
     padding: 20px 0;
   }
@@ -205,14 +212,16 @@
   .hero-cta h1,
   .hero-cta h2 {
     font-size: 26px;
-    margin: 0 0 16px;
   }
 
   .hero-cta p {
     font-size: 16px;
   }
+}
 
-  .hero-cta .button-container a.button {
-    font-size: 16px;
+/* Large desktop (1200px+) */
+@media (width >= 1200px) {
+  .hero-cta {
+    padding: 30px 80px;
   }
 }
