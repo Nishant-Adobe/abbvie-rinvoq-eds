@@ -363,26 +363,6 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
   bottom: 0;
 }
 
-/* ISI section — yellow brush underline on bold sub-headings (only in last section) */
-main > .section:last-of-type > .default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a)) {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-  font-size: var(--font-size-lg);
-  font-family: var(--font-family-heading);
-}
-
-main > .section:last-of-type > .default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a))::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 10px;
-  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/common/ISI-swash1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 10px;
-  position: absolute;
-  bottom: 0;
-}
 
 /* Eligibility fine-print text (small gray) */
 [id="eligibilityTandC"] {
