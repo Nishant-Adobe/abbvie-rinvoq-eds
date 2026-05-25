@@ -22,10 +22,10 @@
 
 .cards-condition .cards-condition-card-body {
   margin: 0;
-  padding: 8px 30px 8px 10px;
+  padding: 6px 30px 6px 8px;
   display: flex;
   align-items: center;
-  min-height: 54px;
+  min-height: 50px;
 }
 
 .cards-condition .cards-condition-card-body p {
@@ -33,14 +33,14 @@
 }
 
 .cards-condition .cards-condition-card-body a,
-.cards-condition .cards-condition-card-body .button-container a.button {
+.cards-condition .cards-condition-card-body .button-container a.button,
+.cards-condition .cards-condition-card-body .button-container a.button:any-link {
   color: #90124a;
   font-size: 15px;
   font-weight: normal;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  display: block;
   line-height: 1.2;
   background: none;
   border: none;
@@ -49,6 +49,35 @@
   margin: 0;
   white-space: normal;
   text-align: left;
+}
+
+.cards-condition .cards-condition-card-body .cards-condition-category {
+  font-size: 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+  color: #25282a;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 1px;
+}
+
+.cards-condition .cards-condition-card-body .cards-condition-name {
+  font-size: 13px;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  font-weight: normal;
+  color: #90124a;
+  display: block;
+  line-height: 1.2;
+}
+
+.cards-condition .cards-condition-card-body .cards-condition-subtitle {
+  font-size: 8px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+  color: #90124a;
+  display: block;
+  line-height: 1.2;
+  margin-top: 1px;
 }
 
 .cards-condition .cards-condition-card-body a:hover,
@@ -62,7 +91,7 @@
 .cards-condition > ul > li::after {
   content: '\276F';
   position: absolute;
-  right: 10px;
+  right: 6px;
   top: 50%;
   transform: translateY(-50%);
   color: #90124a;
@@ -81,7 +110,10 @@
 
 /* stylelint-disable no-descending-specificity */
 .cards-condition > ul > li:hover a,
-.cards-condition > ul > li:hover .button-container a.button {
+.cards-condition > ul > li:hover .button-container a.button,
+.cards-condition > ul > li:hover .cards-condition-category,
+.cards-condition > ul > li:hover .cards-condition-name,
+.cards-condition > ul > li:hover .cards-condition-subtitle {
   color: #fff;
 }
 /* stylelint-enable no-descending-specificity */
@@ -94,18 +126,54 @@
   margin: 0;
 }
 
-@media (width >= 600px) {
+/* Tablet (601px–984px): 3 columns */
+@media (width >= 601px) {
+  .cards-condition > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+  }
+
+  .cards-condition .cards-condition-card-body {
+    min-height: 65px;
+    padding: 8px 35px 8px 10px;
+  }
+
+  .cards-condition .cards-condition-card-body .cards-condition-category {
+    font-size: 11px;
+  }
+
+  .cards-condition .cards-condition-card-body .cards-condition-name {
+    font-size: 15px;
+  }
+
+  .cards-condition .cards-condition-card-body .cards-condition-subtitle {
+    font-size: 9px;
+  }
+
+  .cards-condition > ul > li::after {
+    font-size: 22px;
+    right: 8px;
+  }
+}
+
+/* Desktop (985px+): 4 columns, fixed 72px height */
+@media (width >= 985px) {
   .cards-condition > ul {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .cards-condition .cards-condition-card-body {
-    min-height: 65px;
-  }
-}
-
-@media (width >= 985px) {
-  .cards-condition .cards-condition-card-body {
+    height: 72px;
     min-height: 72px;
+    padding: 8px 38px 8px 12px;
+  }
+
+  .cards-condition .cards-condition-card-body .cards-condition-name {
+    font-size: 16px;
+  }
+
+  .cards-condition > ul > li::after {
+    font-size: 24px;
+    right: 10px;
   }
 }
