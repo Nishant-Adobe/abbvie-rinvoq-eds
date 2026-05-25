@@ -168,6 +168,7 @@
   .hero-cta {
     align-items: flex-start;
     justify-content: flex-start;
+    background-color: #25282a;
   }
 
   .hero-cta > div:first-child picture > img {
@@ -193,6 +194,7 @@
   .hero-cta {
     align-items: flex-start;
     justify-content: flex-start;
+    background-color: #25282a;
   }
 
   .hero-cta > div:first-child picture > img {
