@@ -11,12 +11,12 @@
 
 .hero-cta {
   position: relative;
-  padding: 150px 20px 30px;
-  min-height: 435px;
+  padding: 0;
+  aspect-ratio: 64 / 11;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -55,14 +55,14 @@
   max-width: none;
 }
 
-/* Text content — white text, centered on mobile */
+/* Text content — white text, positioned over the brushstroke */
 .hero-cta > div:last-child {
   position: relative;
   z-index: 1;
   color: #fff;
   width: 100%;
   max-width: 500px;
-  padding: 0;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -163,21 +163,61 @@
   text-decoration: underline;
 }
 
-/* Tablet (601px+) — text right, 435px height */
+/* Tablet (601px+) — text overlaid on right */
 @media (width >= 601px) {
   .hero-cta {
-    min-height: 435px;
-    padding: 30px;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
+    padding: 20px 30px;
   }
 
   .hero-cta > div:last-child {
-    width: 50%;
-    max-width: 500px;
+    width: 45%;
+    max-width: 450px;
     text-align: left;
     padding: 0;
+  }
+
+  .hero-cta h1,
+  .hero-cta h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+
+  .hero-cta p {
+    font-size: 14px;
+    margin: 0 0 8px;
+  }
+
+  .hero-cta .button-container a.button {
+    font-size: 14px;
+  }
+}
+
+/* Desktop (985px+) */
+@media (width >= 985px) {
+  .hero-cta > div:last-child {
+    width: 40%;
+    max-width: 500px;
+    padding: 10px 0;
+  }
+
+  .hero-cta h1,
+  .hero-cta h2 {
+    font-size: 22px;
+    margin: 0 0 12px;
+  }
+
+  .hero-cta p {
+    font-size: 15px;
+    margin: 0 0 10px;
+  }
+}
+
+/* Large desktop (1200px+) */
+@media (width >= 1200px) {
+  .hero-cta {
+    padding: 20px 50px;
   }
 
   .hero-cta h1,
@@ -188,40 +228,5 @@
 
   .hero-cta p {
     font-size: 16px;
-    margin: 0 0 14px;
-  }
-
-  .hero-cta .button-container a.button {
-    font-size: 16px;
-  }
-}
-
-/* Desktop (985px+) — 380px height, content right */
-@media (width >= 985px) {
-  .hero-cta {
-    min-height: 380px;
-    padding: 30px 50px;
-  }
-
-  .hero-cta > div:last-child {
-    width: 45%;
-    max-width: 500px;
-    padding: 20px 0;
-  }
-
-  .hero-cta h1,
-  .hero-cta h2 {
-    font-size: 26px;
-  }
-
-  .hero-cta p {
-    font-size: 16px;
-  }
-}
-
-/* Large desktop (1200px+) */
-@media (width >= 1200px) {
-  .hero-cta {
-    padding: 30px 80px;
   }
 }
