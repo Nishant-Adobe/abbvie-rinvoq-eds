@@ -413,12 +413,14 @@ main > .section.carousel-hero-container > div {
 }
 
 /* Homepage: columns-value section (yellow/white split) */
-main > .section.columns-container:not(.grey) {
+main > .section.columns-container:not(.grey),
+main > .section.columns-value-container {
   margin: 0;
   padding: 0;
 }
 
-main > .section.columns-container:not(.grey) > .columns-wrapper {
+main > .section.columns-container:not(.grey) > .columns-wrapper,
+main > .section.columns-value-container > .columns-value-wrapper {
   max-width: unset;
   padding: 0;
 }
