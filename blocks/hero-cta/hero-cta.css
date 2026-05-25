@@ -198,11 +198,11 @@
   }
 
   .hero-cta > div:first-child picture > img {
-    object-position: center center;
+    object-position: left center;
   }
 
   .hero-cta > div:last-child {
-    padding: 200px 30px 20px;
+    padding: 150px 30px 20px;
   }
 
   .hero-cta h1,
