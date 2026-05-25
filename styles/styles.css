@@ -1,89 +1,131 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * Rinvoq EDS — Global Styles
+ * Design tokens extracted from rinvoq.com
+ * Typography defined in fonts.css (single source of truth)
  */
 
+/* stylelint-disable no-descending-specificity */
+
 :root {
-  /* colors — Rinvoq brand */
-  --background-color: white;
-  --light-color: #f5f5f5;
-  --dark-color: #25282a;
-  --text-color: #25282a;
-  --link-color: #90124a;
-  --link-hover-color: #710e3a;
+  /* Colors */
+  --color-background: #fff;
+  --color-surface: #f5f5f5;
+  --color-surface-alt: #f3f3f3;
+  --color-text-primary: #25282a;
+  --color-text-secondary: #666869;
+  --color-text-footnote: #7d7f80;
+  --color-heading: #25282a;
+  --color-link: #90124a;
+  --color-link-hover: #710e3a;
+  --color-accent-yellow: #ffd100;
+  --color-accent-yellow-bright: #fcd102;
+  --color-accent-pink: #d7196d;
+  --color-border: #e6e6e6;
+  --color-border-light: #d4d4d4;
+  --color-white: #fff;
+  --color-black: #000;
 
-  /* fonts — Rinvoq brand */
-  --body-font-family: 'Helvetica Neue', arial, sans-serif;
-  --heading-font-family: 'Neue Haas Grotesk Disp', arial, sans-serif;
+  /* Typography — families from fonts.css */
+  --font-family-heading: 'Neue Haas Grotesk Disp', arial, sans-serif;
+  --font-family-body: 'Helvetica Neue LT', 'Helvetica Neue', arial, sans-serif;
 
-  /* body sizes */
-  --body-font-size-m: 16px;
-  --body-font-size-s: 14px;
-  --body-font-size-xs: 12px;
+  /* Font sizes */
+  --font-size-base: 1rem;
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.625rem;
+  --font-size-xxl: 2rem;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 26px;
-  --heading-font-size-xl: 26px;
-  --heading-font-size-l: 20px;
-  --heading-font-size-m: 20px;
-  --heading-font-size-s: 16px;
-  --heading-font-size-xs: 14px;
+  /* Heading sizes (mobile-first) */
+  --heading-font-size-xxl: 1.625rem;
+  --heading-font-size-xl: 1.625rem;
+  --heading-font-size-l: 1.5rem;
+  --heading-font-size-m: 1.25rem;
+  --heading-font-size-s: 1.125rem;
+  --heading-font-size-xs: 1rem;
 
-  /* nav height */
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 4rem;
+
+  /* Border radius */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-pill: 2.4em;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 10%);
+  --shadow-md: 0 3px 10px rgb(0 0 0 / 15%);
+
+  /* Layout */
   --nav-height: 64px;
+  --content-max-width: 945px;
+  --site-max-width: 1200px;
+
+  /* Legacy token aliases (for existing block CSS compatibility) */
+  --background-color: var(--color-background);
+  --light-color: var(--color-surface);
+  --dark-color: var(--color-text-primary);
+  --text-color: var(--color-text-primary);
+  --link-color: var(--color-link);
+  --link-hover-color: var(--color-link-hover);
+  --body-font-family: var(--font-family-body);
+  --heading-font-family: var(--font-family-heading);
+  --body-font-size-m: var(--font-size-md);
+  --body-font-size-s: var(--font-size-sm);
+  --body-font-size-xs: var(--font-size-xs);
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
+/* Responsive token overrides */
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 26px;
-    --heading-font-size-xl: 26px;
-    --heading-font-size-l: 20px;
-    --heading-font-size-m: 20px;
-    --heading-font-size-s: 16px;
-    --heading-font-size-xs: 14px;
+    --heading-font-size-xxl: 1.875rem;
+    --heading-font-size-xl: 1.625rem;
+    --heading-font-size-l: 1.5rem;
   }
 }
 
+/* Fallback fonts */
+@font-face {
+  font-family: 'Neue Haas Grotesk Disp Fallback';
+  size-adjust: 95%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Fallback';
+  size-adjust: 100%;
+  src: local('Arial');
+}
+
+/* Body defaults */
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 body.appear {
   display: block;
 }
 
+/* Header & Footer */
 header {
   height: var(--nav-height);
 }
@@ -98,6 +140,7 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -106,10 +149,10 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+  font-family: var(--font-family-heading);
+  font-weight: normal;
+  line-height: var(--line-height-tight);
+  scroll-margin: calc(var(--nav-height) + var(--spacing-md));
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -119,6 +162,7 @@ h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
+/* Body copy */
 p,
 dl,
 ol,
@@ -129,23 +173,21 @@ blockquote {
   margin-bottom: 0.25em;
 }
 
+/* Code blocks */
 code,
 pre {
-  font-size: var(--body-font-size-s);
+  font-size: var(--font-size-sm);
 }
 
 pre {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
   overflow-x: auto;
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
-}
-
+/* Form elements inherit font */
 input,
 textarea,
 select,
@@ -153,36 +195,39 @@ button {
   font: inherit;
 }
 
-/* links */
+/* Links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
+  font-family: var(--font-family-body);
+  font-weight: 700;
   overflow-wrap: break-word;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--color-link-hover);
   text-decoration: underline;
 }
 
-/* buttons */
+/* Buttons — Rinvoq primary: white bg, maroon border, 5px radius */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
+  margin: var(--spacing-sm) 0;
+  border: 2px solid var(--color-link);
+  border-radius: var(--radius-md);
+  padding: 0.5em 1.5em;
+  font-family: var(--font-family-heading);
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
+  font-size: var(--font-size-sm);
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--color-white);
+  color: var(--color-link);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -193,23 +238,33 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-link);
+  color: var(--color-white);
   cursor: pointer;
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
   cursor: unset;
 }
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: var(--color-link);
+  border: 2px solid var(--color-link);
+  color: var(--color-white);
 }
 
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+}
+
+/* Images */
 main img {
   max-width: 100%;
   width: auto;
@@ -227,15 +282,15 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* Section layout */
 main > .section {
-  margin: 40px 0;
+  margin: var(--spacing-xl) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--site-max-width);
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--spacing-lg);
 }
 
 main > .section:first-of-type {
@@ -244,220 +299,89 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 var(--spacing-xl);
   }
 }
 
-/* section metadata */
+/* Section variants */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: var(--color-surface);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--spacing-xl) 0;
 }
 
 main .section.grey {
-  background-color: #f5f5f5;
+  background-color: var(--color-surface-alt);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--spacing-xl) 0;
 }
 
-/* FAQ page: jump links as inline horizontal text links */
-.accordion-container > .default-content-wrapper > ul:first-of-type {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 32px;
-  list-style: none;
-  padding: 0;
-  margin: 0.8em 0;
-}
-
-.accordion-container > .default-content-wrapper > ul:first-of-type li {
-  margin: 0;
-}
-
-.accordion-container > .default-content-wrapper > ul:first-of-type a {
-  color: var(--link-color);
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.accordion-container > .default-content-wrapper > ul:first-of-type a::after {
-  content: '\276F';
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #90124a;
-  color: #fff;
-  font-size: 9px;
-  line-height: 1;
-  margin-left: 6px;
-  vertical-align: middle;
-  transform: rotate(90deg);
-}
-
-.accordion-container > .default-content-wrapper > ul:first-of-type a:hover {
-  text-decoration: underline;
-}
-
-/* stylelint-disable no-descending-specificity */
-
-/* Category headings (About Eczema, Taking RINVOQ, etc.) */
-.accordion-container > .default-content-wrapper + .accordion-wrapper + .default-content-wrapper > p,
-.accordion-container > .accordion-wrapper + .default-content-wrapper > p,
-.accordion-container > .columns-safety-wrapper + .default-content-wrapper > p,
-.columns-safety-container > .columns-wrapper + .default-content-wrapper > p {
-  font-size: 20px;
+/* Grey section: "Choose Your Condition" heading */
+.section.grey > .default-content-wrapper:first-child > p:first-child {
+  font-size: var(--font-size-sm);
   font-weight: 700;
-  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
-  color: #25282a;
-  margin-top: 2em;
-  margin-bottom: 0.8em;
-}
-
-/* stylelint-enable no-descending-specificity */
-
-/* First default-content-wrapper category heading (About Eczema) — after the ul */
-.accordion-container > .default-content-wrapper:first-child > p:last-child {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
-  color: #25282a;
-  margin-top: 2em;
-  margin-bottom: 0.8em;
-}
-
-/* ISI section: h3 with yellow brush underline */
-main > .section:nth-last-of-type(2) .default-content-wrapper h3 {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-primary);
+  border-bottom: 3px solid var(--color-accent-yellow);
   display: inline-block;
-  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 4px;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
+  margin-bottom: var(--spacing-lg);
 }
 
-/* ISI section: bold sub-headings with yellow brush underline */
-main > .section:nth-last-of-type(2) .default-content-wrapper > p > strong:only-child {
-  display: inline;
-  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 4px;
-  padding-bottom: 4px;
-  font-size: 20px;
-  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+/* Grey section: footnote text */
+.section.grey > .default-content-wrapper:last-child p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
 }
 
-/* SUGGESTED FOR YOU eyebrow */
-main > .section:nth-last-of-type(3) .default-content-wrapper > p:first-child {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.75px;
-  text-transform: uppercase;
-  display: inline-block;
-  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 3px;
-  padding-bottom: 4px;
-}
-
-/* SUGGESTED FOR YOU: CTA link as text (not button) */
-main > .section:nth-last-of-type(3) .default-content-wrapper .button-container a.button {
-  background: none;
-  color: #90124a;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
-  white-space: normal;
-  text-align: left;
-}
-
-main > .section:nth-last-of-type(3) .default-content-wrapper .button-container a.button::after {
-  content: ' \203A';
-  font-size: 18px;
-}
-
-/* ========================================
-   Homepage-specific styles
-   ======================================== */
-
-/* stylelint-disable no-descending-specificity */
-
-/* Eligibility terms — small gray fine-print */
-.hero-container + .section > .default-content-wrapper p,
-main > .section:nth-last-of-type(3).carousel-container ~ .section:not(:last-of-type) > .default-content-wrapper p {
-  font-size: 10px;
-  color: #666869;
-  line-height: 14px;
-}
-
-/* Homepage section: remove margin for full-bleed hero */
-main > .section.carousel-container,
-main > .section.carousel-hero-container {
-  margin: 0;
-}
-
-main > .section.carousel-container > div,
-main > .section.carousel-hero-container > div {
-  max-width: unset;
-  padding: 0;
-}
-
-/* Homepage: columns-value section (yellow/white split) */
-main > .section.columns-container:not(.grey),
-main > .section.columns-value-container {
-  margin: 0;
-  padding: 0;
-}
-
-main > .section.columns-container:not(.grey) > .columns-wrapper,
-main > .section.columns-value-container > .columns-value-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
-/* Homepage cards section: RINVOQ LQ image between card grids */
-main > .section.grey.cards-condition-container > .default-content-wrapper img {
+/* Grey section: RINVOQ LQ image */
+.section.grey > .default-content-wrapper img {
   max-width: 340px;
   display: block;
-  margin: 20px 0;
+  margin: var(--spacing-lg) 0;
 }
 
-main > .section.grey.cards-condition-container > .default-content-wrapper p {
-  text-align: left;
-  max-width: unset;
-}
-
-/* "Choose Your Condition" heading — bold, left-aligned, yellow underline */
-main > .section.grey.cards-condition-container > .default-content-wrapper:first-child > p:first-child {
-  font-size: 14px;
-  font-weight: 700;
-  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
-  color: #25282a;
-  border-bottom: 3px solid #ffd100;
-  max-width: 170px;
-  padding-bottom: 2px;
-  margin-bottom: 20px;
-  text-align: left;
+/* ISI section — yellow brush underline on h3 headings */
+.default-content-wrapper h3 {
+  position: relative;
   display: inline-block;
+  padding-bottom: 10px;
+  font-family: var(--font-family-heading);
 }
 
-/* Footnotes in grey section — smaller text */
-main > .section.grey > .default-content-wrapper:last-child p {
-  font-size: 12px;
-  color: #666869;
-  line-height: 1.4;
-  text-align: left;
-  max-width: unset;
+.default-content-wrapper h3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/common/ISI-swash1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ISI section — yellow brush underline on bold sub-headings */
+.default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a)) {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-heading);
+}
+
+.default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a))::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/common/ISI-swash1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  position: absolute;
+  bottom: 0;
 }
 
 /* stylelint-enable no-descending-specificity */
