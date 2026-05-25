@@ -30,20 +30,25 @@
 /* stylelint-disable no-descending-specificity */
 .columns-value > div > div:first-child img {
   width: auto;
-  max-width: 250px;
-  margin: 0;
+  max-width: 300px;
+  margin: 0 0 10px;
   display: block;
 }
 
-/* Right column: white about */
+/* Right column: white */
 .columns-value > div > div:last-child {
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 
 .columns-value > div > div:last-child img {
-  max-width: 200px;
+  max-width: 300px;
   margin: 20px 0 0;
   display: block;
+}
+
+/* Lightbulb icon — first image in right column */
+.columns-value > div > div:last-child > p:first-child img {
+  max-width: 80px;
 }
 
 .columns-value h2 {
@@ -62,8 +67,7 @@
   margin: 0 0 12px;
 }
 
-/* CTA button — white bg, maroon border, right arrow */
-.columns-value a,
+/* CTA button — ONLY .button-container links get the bordered style */
 .columns-value .button-container a.button {
   color: #90124a;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
@@ -100,12 +104,47 @@
   color: #fff;
 }
 
+/* Plain inline links (like "here", ISI link) — no button styling */
+.columns-value p a:not(.button) {
+  color: #90124a;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  position: static;
+}
+
 /* Footnote text — smaller */
-.columns-value > div > div:first-child > p:nth-last-child(2),
-.columns-value > div > div:first-child > p:last-child {
+.columns-value > div > div:first-child > p:nth-last-child(-n+3):not(.button-container) {
   font-size: 12px;
   line-height: 1.4;
   color: #25282a;
+}
+
+/* "See full ISI" link — plain maroon text with down arrow, no border */
+.columns-value > div > div:first-child > .button-container:last-child a.button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 4px 0;
+  font-size: 14px;
+  color: #90124a;
+  font-weight: 700;
+  position: static;
+}
+
+.columns-value > div > div:first-child > .button-container:last-child a.button::after {
+  content: ' \25BC';
+  position: static;
+  transform: none;
+  font-size: 10px;
+  color: #90124a;
 }
 /* stylelint-enable no-descending-specificity */
 
@@ -121,5 +160,9 @@
 
   .columns-value > div > div:first-child {
     width: 50%;
+  }
+
+  .columns-value > div > div:last-child img {
+    max-width: 350px;
   }
 }
