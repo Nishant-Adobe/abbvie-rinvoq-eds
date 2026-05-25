@@ -401,11 +401,13 @@ main > .section:nth-last-of-type(3).carousel-container ~ .section:not(:last-of-t
 }
 
 /* Homepage section: remove margin for full-bleed hero */
-main > .section.carousel-container {
+main > .section.carousel-container,
+main > .section.carousel-hero-container {
   margin: 0;
 }
 
-main > .section.carousel-container > div {
+main > .section.carousel-container > div,
+main > .section.carousel-hero-container > div {
   max-width: unset;
   padding: 0;
 }
