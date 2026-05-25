@@ -1,27 +1,103 @@
+/* Cards block — condition selector grid for homepage */
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  background-color: #25282a;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 0;
+  padding: 8px 23px;
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+}
+
+.cards .cards-card-body p {
+  margin: 0;
+}
+
+.cards .cards-card-body a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Helvetica Neue", arial, sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.3;
+}
+
+.cards .cards-card-body a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .cards .cards-card-image {
-  line-height: 0;
+  display: none;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+/* "Choose Your Condition" heading in the section */
+.cards-container > .default-content-wrapper > p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  color: #25282a;
+  display: inline-block;
+  border-bottom: 3px solid #ffd100;
+  padding-bottom: 4px;
+  max-width: 170px;
+  margin-bottom: 20px;
+}
+
+/* Reset button auto-decoration inside cards */
+.cards .button-container {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards .button-container a.button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: normal;
+  text-align: left;
+  display: inline;
+}
+
+.cards .button-container a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 985px) {
+  .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards .cards-card-body {
+    min-height: 72px;
+  }
 }

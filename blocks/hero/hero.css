@@ -1,3 +1,4 @@
+/* Hero CTA block — SPEAK Network (brushstroke background, white text) */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -7,21 +8,15 @@
   position: relative;
   padding: 40px 24px;
   min-height: 300px;
-}
-
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
 }
 
 .hero img {
@@ -30,8 +25,84 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+.hero > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero > div:last-child {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 945px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.hero h1,
+.hero h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  max-width: unset;
+}
+
+.hero p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.hero a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Reset button auto-decoration */
+.hero .button-container a.button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: normal;
+  text-align: left;
+}
+
+.hero .button-container a.button:hover {
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
   .hero {
+    min-height: 380px;
+  }
+
+  .hero > div:last-child {
+    padding-left: 50px;
+    max-width: 500px;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media (width >= 985px) {
+  .hero {
+    min-height: 380px;
     padding: 40px 32px;
   }
 }
