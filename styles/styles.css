@@ -195,7 +195,7 @@ button {
   font: inherit;
 }
 
-/* Links */
+/* Links — Rinvoq uses bold font-family for links (Helvetica Neue Bold) */
 a:any-link {
   color: var(--color-link);
   text-decoration: none;
@@ -382,6 +382,13 @@ main .section.grey {
   background-size: 100% 10px;
   position: absolute;
   bottom: 0;
+}
+
+/* Eligibility fine-print text (small gray) */
+[id="eligibilityTandC"] {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
 }
 
 /* stylelint-enable no-descending-specificity */
