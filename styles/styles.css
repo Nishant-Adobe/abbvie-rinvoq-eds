@@ -343,15 +343,15 @@ main .section.grey {
   margin: var(--spacing-lg) 0;
 }
 
-/* ISI section — yellow brush underline on h3 headings */
-.default-content-wrapper h3 {
+/* ISI section — yellow brush underline on h3 headings (only in last section) */
+main > .section:last-of-type > .default-content-wrapper h3 {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
   font-family: var(--font-family-heading);
 }
 
-.default-content-wrapper h3::after {
+main > .section:last-of-type > .default-content-wrapper h3::after {
   content: '';
   display: block;
   width: 100%;
@@ -363,8 +363,8 @@ main .section.grey {
   bottom: 0;
 }
 
-/* ISI section — yellow brush underline on bold sub-headings */
-.default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a)) {
+/* ISI section — yellow brush underline on bold sub-headings (only in last section) */
+main > .section:last-of-type > .default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a)) {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -372,7 +372,7 @@ main .section.grey {
   font-family: var(--font-family-heading);
 }
 
-.default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a))::after {
+main > .section:last-of-type > .default-content-wrapper > p:not(:has(+ ul)) > strong:only-child:not(:has(a))::after {
   content: '';
   display: block;
   width: 100%;
