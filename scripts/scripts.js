@@ -76,6 +76,16 @@ function buildAutoBlocks() {
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
+function decorateISIHeadings(main) {
+  const lastSection = main.querySelector('.section:last-of-type');
+  if (!lastSection) return;
+  lastSection.querySelectorAll('.default-content-wrapper > p > strong:only-child').forEach((strong) => {
+    if (strong.textContent.trim().endsWith('?')) {
+      strong.classList.add('isi-question-heading');
+    }
+  });
+}
+
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
@@ -83,6 +93,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateISIHeadings(main);
 }
 
 /**
