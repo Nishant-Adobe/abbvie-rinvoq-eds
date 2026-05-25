@@ -160,37 +160,35 @@
   text-decoration: underline;
 }
 
-/* Mobile (< 601px): stacked layout, image behind, text below logo */
+/* Mobile (< 601px): fixed height, text overlaid at bottom */
 @media (width < 601px) {
   .hero-cta {
-    height: auto;
-    min-height: 435px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
+    height: 435px;
+    background-color: #25282a;
   }
 
   .hero-cta > div:first-child img {
-    object-position: center top;
+    object-position: center center;
+    object-fit: contain;
   }
 
   .hero-cta > div:last-child {
     width: 100%;
     max-width: unset;
     text-align: center;
-    padding: 200px 20px 30px;
+    padding: 15px 20px 20px;
+    background-color: rgb(37 40 42 / 85%);
   }
 
   .hero-cta h1,
   .hero-cta h2 {
-    font-size: 18px;
-    margin: 0 0 8px;
+    font-size: 16px;
+    margin: 0 0 6px;
   }
 
   .hero-cta p {
-    font-size: 13px;
-    margin: 0 0 5px;
+    font-size: 12px;
+    margin: 0 0 4px;
     line-height: 1.4;
   }
 }
