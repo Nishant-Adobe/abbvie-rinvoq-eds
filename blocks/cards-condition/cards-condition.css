@@ -1,89 +1,110 @@
-/* Cards Condition — dark condition selector tiles for homepage */
+/* Cards Condition — condition selector tiles (white bg, maroon border, arrow) */
 .cards-condition > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 13px;
+  gap: 10px 13px;
 }
 
 .cards-condition > ul > li {
-  background-color: #25282a;
-  border: none;
-  border-radius: 0;
+  background-color: #fff;
+  border: 2px solid #90124a;
+  border-radius: 5px;
   overflow: hidden;
+  position: relative;
+}
+
+.cards-condition > ul > li > div:first-child:empty {
+  display: none;
 }
 
 .cards-condition .cards-condition-card-body {
   margin: 0;
-  padding: 8px 23px;
+  padding: 8px 30px 8px 10px;
   display: flex;
   align-items: center;
-  min-height: 65px;
+  min-height: 54px;
 }
 
 .cards-condition .cards-condition-card-body p {
   margin: 0;
 }
 
-.cards-condition .cards-condition-card-body a {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Helvetica Neue", arial, sans-serif;
+.cards-condition .cards-condition-card-body a,
+.cards-condition .cards-condition-card-body .button-container a.button {
+  color: #90124a;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  line-height: 1.3;
-}
-
-.cards-condition .cards-condition-card-body a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.cards-condition .cards-condition-card-image {
-  display: none;
-}
-
-/* Reset button auto-decoration inside cards */
-.cards-condition .button-container {
-  margin: 0;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-.cards-condition .button-container a.button {
+  line-height: 1.2;
   background: none;
   border: none;
   border-radius: 0;
   padding: 0;
   margin: 0;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
   white-space: normal;
   text-align: left;
-  display: inline;
 }
 
-.cards-condition .button-container a.button:hover {
-  background: none;
+.cards-condition .cards-condition-card-body a:hover,
+.cards-condition .cards-condition-card-body .button-container a.button:hover {
+  text-decoration: none;
+  background: #90124a;
   color: #fff;
-  text-decoration: underline;
+}
+
+/* Arrow indicator on right side of each tile */
+.cards-condition > ul > li::after {
+  content: '\276F';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #90124a;
+  font-size: 18px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.cards-condition > ul > li:hover {
+  background-color: #90124a;
+}
+
+.cards-condition > ul > li:hover::after {
+  color: #fff;
+}
+
+/* stylelint-disable no-descending-specificity */
+.cards-condition > ul > li:hover a,
+.cards-condition > ul > li:hover .button-container a.button {
+  color: #fff;
+}
+/* stylelint-enable no-descending-specificity */
+
+.cards-condition .cards-condition-card-image {
+  display: none;
+}
+
+.cards-condition .button-container {
+  margin: 0;
 }
 
 @media (width >= 600px) {
   .cards-condition > ul {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards-condition .cards-condition-card-body {
+    min-height: 65px;
   }
 }
 
 @media (width >= 985px) {
-  .cards-condition > ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .cards-condition .cards-condition-card-body {
     min-height: 72px;
   }
