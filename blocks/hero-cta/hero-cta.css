@@ -11,8 +11,8 @@
 
 .hero-cta {
   position: relative;
-  padding: 40px 24px;
-  min-height: 250px;
+  padding: 60px 24px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -124,8 +124,8 @@
 /* Tablet */
 @media (width >= 600px) {
   .hero-cta {
-    min-height: 350px;
-    padding: 40px 30px;
+    min-height: 450px;
+    padding: 60px 30px;
   }
 
   .hero-cta > div:last-child {
@@ -135,29 +135,35 @@
 
   .hero-cta h1,
   .hero-cta h2 {
-    font-size: 26px;
-    margin: 0 0 16px;
+    font-size: 28px;
+    margin: 0 0 20px;
   }
 
   .hero-cta p {
-    font-size: 16px;
+    font-size: 18px;
+    margin: 0 0 16px;
   }
 
   .hero-cta .button-container a.button {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 /* Desktop */
 @media (width >= 985px) {
   .hero-cta {
-    min-height: 380px;
-    padding: 40px 80px;
+    min-height: 500px;
+    padding: 60px 80px;
   }
 
   .hero-cta > div:last-child {
-    max-width: 450px;
+    max-width: 500px;
     margin-left: auto;
-    padding: 30px 0;
+    padding: 40px 0;
+  }
+
+  .hero-cta h1,
+  .hero-cta h2 {
+    font-size: 30px;
   }
 }
