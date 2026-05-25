@@ -87,6 +87,24 @@ function decorateISIHeadings(main) {
   });
 }
 
+function decorateFAQJumpLinks(main) {
+  const jumpLinks = main.querySelectorAll('.accordion-faq-container > .default-content-wrapper > ul > li > a[href^="#"]');
+  if (!jumpLinks.length) return;
+  const targets = new Map();
+  jumpLinks.forEach((link) => {
+    targets.set(link.getAttribute('href').substring(1), true);
+  });
+  main.querySelectorAll('.accordion-faq-container > .default-content-wrapper > p').forEach((p) => {
+    const text = p.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+    const altText = p.textContent.trim().toLowerCase().replace(/\s+&\s+/g, 'and').replace(/[^a-z0-9]+/g, '');
+    targets.forEach((_, id) => {
+      if (id === text || id === altText || id.replace(/-/g, '') === altText) {
+        p.id = id;
+      }
+    });
+  });
+}
+
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
@@ -95,6 +113,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateISIHeadings(main);
+  decorateFAQJumpLinks(main);
 }
 
 /**

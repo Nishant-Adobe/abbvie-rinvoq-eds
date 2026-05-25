@@ -23,7 +23,7 @@
 .accordion-faq details summary p {
   font-size: 15px;
   font-weight: 400;
-  font-family: var(--ff-heading);
+  font-family: var(--font-family-heading);
   color: var(--color-text-primary);
   line-height: 18px;
   margin: 0;
@@ -38,7 +38,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: var(--color-text-primary);
+  background-color: var(--color-link);
 }
 
 .accordion-faq details summary::after {
@@ -54,6 +54,10 @@
   height: 24px;
   text-align: center;
   line-height: 24px;
+}
+
+.accordion-faq details[open] summary {
+  background-color: rgb(252 209 2);
 }
 
 .accordion-faq details[open] summary::after {
@@ -84,4 +88,20 @@
 
 .accordion-faq details .accordion-faq-item-body a {
   color: var(--color-link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.accordion-faq details .accordion-faq-item-body a.button {
+  all: unset;
+  color: var(--color-link);
+  font-weight: 700;
+  font-family: var(--font-family-body);
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+
+.accordion-faq details .accordion-faq-item-body a.button:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
 }
