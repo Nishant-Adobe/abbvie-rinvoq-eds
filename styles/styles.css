@@ -437,6 +437,20 @@ main > .section.grey .default-content-wrapper p {
   margin-right: auto;
 }
 
+/* "Choose Your Condition" heading — bold, left-aligned, yellow underline */
+main > .section.grey.cards-condition-container > .default-content-wrapper:first-child > p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  color: #25282a;
+  border-bottom: 3px solid #ffd100;
+  max-width: 170px;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
 /* Footnotes in grey section — smaller text */
 main > .section.grey > .default-content-wrapper:last-child p {
   font-size: 12px;
