@@ -440,7 +440,7 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 /* FAQ page — category headings (About Eczema, About RINVOQ, etc.) */
-.accordion-faq-container > .default-content-wrapper:has(+ .accordion-faq-wrapper) > p:last-child {
+.accordion-faq-container > .default-content-wrapper > p:only-child {
   font-family: var(--font-family-heading);
   font-size: 20px;
   font-weight: 400;
@@ -450,12 +450,23 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 /* Category headings in grey section */
-.grey.accordion-faq-container > .default-content-wrapper:has(+ .accordion-faq-wrapper) > p:last-child {
+.grey.accordion-faq-container > .default-content-wrapper > p:only-child {
   margin-top: 32px;
 }
 
+/* First section category heading (after the jump links wrapper) */
+.accordion-faq-container > .default-content-wrapper > ul + p {
+  font-family: var(--font-family-heading);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
 /* FAQ page — "SUGGESTED FOR YOU" eyebrow with yellow underline */
-.section > .default-content-wrapper > p:first-child:has(+ p + p > a.button) {
+.section > .default-content-wrapper > p:first-child + p + p.button-container ~ h3,
+.section > .default-content-wrapper > p:first-child:has(+ p + p.button-container) {
   font-family: var(--font-family-heading);
   font-size: 12px;
   font-weight: 400;
@@ -467,7 +478,7 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 /* FAQ page — "SUGGESTED FOR YOU" description text */
-.section > .default-content-wrapper > p:first-child + p:has(+ p > a.button) {
+.section > .default-content-wrapper > p:first-child + p:has(+ p.button-container) {
   font-size: 26px;
   font-family: var(--font-family-heading);
   font-weight: 400;
@@ -509,33 +520,39 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 /* Safety callout — layout and typography */
-.columns-safety-2-cols {
+.columns-safety-2-cols,
+.columns-safety {
   background-color: #f5f5f5;
   padding: 30px 20px;
 }
 
-.columns-safety-2-cols > div {
+.columns-safety-2-cols > div,
+.columns-safety > div {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
 
-.columns-safety-2-cols > div > div:first-child {
+.columns-safety-2-cols > div > div:first-child,
+.columns-safety > div > div:first-child {
   flex-shrink: 0;
   width: 80px;
 }
 
-.columns-safety-2-cols > div > div:first-child img {
+.columns-safety-2-cols > div > div:first-child img,
+.columns-safety > div > div:first-child img {
   width: 80px;
   height: auto;
   display: block;
 }
 
-.columns-safety-2-cols > div > div:last-child {
+.columns-safety-2-cols > div > div:last-child,
+.columns-safety > div > div:last-child {
   flex: 1;
 }
 
-.columns-safety-2-cols > div > div:last-child h2 {
+.columns-safety-2-cols > div > div:last-child h2,
+.columns-safety > div > div:last-child h2 {
   font-size: 20px;
   font-weight: 700;
   font-family: var(--font-family-heading);
@@ -544,27 +561,32 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
   line-height: 1.3;
 }
 
-.columns-safety-2-cols > div > div:last-child p {
+.columns-safety-2-cols > div > div:last-child p,
+.columns-safety > div > div:last-child p {
   font-size: 14.4px;
   line-height: 24px;
   margin: 0 0 8px;
   color: var(--color-text-primary);
 }
 
-.columns-safety-2-cols > div > div:last-child ul {
+.columns-safety-2-cols > div > div:last-child ul,
+.columns-safety > div > div:last-child ul {
   font-size: 14.4px;
   line-height: 24px;
   margin: 0 0 12px;
   padding-left: 20px;
 }
 
-.columns-safety-2-cols > div > div:last-child li {
+.columns-safety-2-cols > div > div:last-child li,
+.columns-safety > div > div:last-child li {
   margin-bottom: 6px;
 }
 
 /* Safety callout — override button styling on links */
 .columns-safety-2-cols a.button:any-link,
-.columns-safety-2-cols a.button {
+.columns-safety-2-cols a.button,
+.columns-safety a.button:any-link,
+.columns-safety a.button {
   display: inline;
   border: none;
   border-radius: 0;
@@ -581,7 +603,33 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 .columns-safety-2-cols a.button:hover,
-.columns-safety-2-cols a.button:focus {
+.columns-safety-2-cols a.button:focus,
+.columns-safety a.button:hover,
+.columns-safety a.button:focus {
+  background-color: transparent;
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Accordion FAQ — override button styling on links inside body */
+.accordion-faq .accordion-faq-item-body a.button:any-link,
+.accordion-faq .accordion-faq-item-body a.button {
+  display: inline;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--color-link);
+  font-weight: 700;
+  font-family: var(--font-family-body);
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+.accordion-faq .accordion-faq-item-body a.button:hover,
+.accordion-faq .accordion-faq-item-body a.button:focus {
   background-color: transparent;
   color: var(--color-link-hover);
   text-decoration: underline;
