@@ -80,7 +80,8 @@ function decorateISIHeadings(main) {
   const lastSection = main.querySelector('.section:last-of-type');
   if (!lastSection) return;
   lastSection.querySelectorAll('.default-content-wrapper > p > strong:only-child').forEach((strong) => {
-    if (strong.textContent.trim().endsWith('?')) {
+    const text = strong.textContent.trim();
+    if (text.endsWith('?') || text === 'USES') {
       strong.classList.add('isi-question-heading');
     }
   });
