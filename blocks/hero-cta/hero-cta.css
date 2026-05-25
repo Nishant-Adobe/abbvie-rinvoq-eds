@@ -1,5 +1,5 @@
 /* Hero CTA — SPEAK Network (brushstroke background, white text)
-   Live site values: height-435 mobile, height-md-435 tablet, height-lg-380 desktop */
+   Live site: height-435 mobile/tablet, height-lg-380 desktop, pt-150/pt-md-200/pt-lg-30 */
 /* stylelint-disable no-descending-specificity */
 .hero-cta-container {
   margin: 0;
@@ -18,9 +18,10 @@
   justify-content: flex-end;
   overflow: hidden;
   height: 435px;
+  background-color: #25282a;
 }
 
-/* Background image — fills block like CSS background-image: cover */
+/* Background image — absolute, covers entire block */
 .hero-cta > div:first-child {
   position: absolute;
   inset: 0;
@@ -56,32 +57,32 @@
   max-width: none;
 }
 
-/* Text content — white, right side */
+/* Text content — white, positioned over image */
 .hero-cta > div:last-child {
   position: relative;
   z-index: 1;
   color: #fff;
-  width: 55%;
-  max-width: 500px;
-  padding: 20px;
+  width: 100%;
+  max-width: unset;
+  padding: 150px 20px 20px 30px;
   text-align: left;
 }
 
 .hero-cta h1,
 .hero-cta h2 {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   line-height: 1.2;
   max-width: unset;
 }
 
 .hero-cta p {
   color: #fff;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.5;
   margin: 0 0 6px;
   font-weight: 700;
 }
@@ -160,92 +161,28 @@
   text-decoration: underline;
 }
 
-/* Mobile (< 601px): full 435px, image covers block, pt-150 pushes text below logo */
+/* Mobile (< 601px): height 435px, pt-150, image object-position 30% top */
 @media (width < 601px) {
-  .hero-cta {
-    height: 435px;
-    background-color: #25282a;
-    align-items: flex-start;
-    justify-content: flex-start;
+  .hero-cta > div:first-child img {
+    object-position: 30% top;
   }
 
+  .hero-cta > div:last-child {
+    padding: 150px 20px 20px 30px;
+  }
+}
+
+/* Tablet (601px–984px): height 435px, pt-200, image shifted left */
+@media (width >= 601px) and (width < 985px) {
   .hero-cta > div:first-child img {
-    object-fit: cover;
-    object-position: left top;
+    object-position: 15% center;
   }
 
   .hero-cta > div:last-child {
     width: 100%;
     max-width: unset;
     text-align: left;
-    padding: 150px 20px 20px 30px;
-  }
-
-  .hero-cta h1,
-  .hero-cta h2 {
-    font-size: 20px;
-    margin: 0 0 10px;
-  }
-
-  .hero-cta p {
-    font-size: 14px;
-    margin: 0 0 6px;
-    line-height: 1.5;
-  }
-}
-
-/* Tablet (601px–984px): height 435px, text pushed right to avoid overlap */
-@media (width >= 601px) and (width < 985px) {
-  .hero-cta {
-    height: 435px;
-  }
-
-  .hero-cta > div:first-child img {
-    object-position: -90px center;
-  }
-
-  .hero-cta > div:last-child {
-    width: 42%;
-    max-width: 400px;
-    padding: 20px 15px 20px 0;
-    margin-left: auto;
-  }
-
-  .hero-cta h1,
-  .hero-cta h2 {
-    font-size: 18px;
-    margin: 0 0 6px;
-  }
-
-  .hero-cta p {
-    font-size: 13px;
-    margin: 0 0 5px;
-  }
-}
-
-/* Desktop (985px+): height 380px, max-width 960px centered */
-@media (width >= 985px) {
-  .hero-cta-container .hero-cta-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  .hero-cta {
-    height: 380px;
-  }
-
-  .hero-cta > div:first-child {
-    width: 1530px;
-  }
-
-  .hero-cta > div:first-child img {
-    object-position: left center;
-  }
-
-  .hero-cta > div:last-child {
-    width: 40%;
-    max-width: 400px;
-    padding: 30px 40px;
+    padding: 200px 30px 20px;
   }
 
   .hero-cta h1,
@@ -258,8 +195,28 @@
   }
 }
 
-/* Large desktop (1200px+) */
-@media (width >= 1200px) {
+/* Desktop (985px+): height 380px, text on right, max-width 960px */
+@media (width >= 985px) {
+  .hero-cta-container .hero-cta-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .hero-cta {
+    height: 380px;
+  }
+
+  .hero-cta > div:first-child img {
+    object-position: left center;
+  }
+
+  .hero-cta > div:last-child {
+    width: 45%;
+    max-width: 450px;
+    margin-left: auto;
+    padding: 30px 40px;
+  }
+
   .hero-cta h1,
   .hero-cta h2 {
     font-size: 24px;
