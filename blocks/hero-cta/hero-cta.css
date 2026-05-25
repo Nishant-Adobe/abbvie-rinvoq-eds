@@ -172,7 +172,7 @@
   }
 
   .hero-cta > div:first-child picture > img {
-    object-position: 25% center;
+    object-position: center center;
   }
 
   .hero-cta > div:last-child {
@@ -198,7 +198,7 @@
   }
 
   .hero-cta > div:first-child picture > img {
-    object-position: 20% center;
+    object-position: center center;
   }
 
   .hero-cta > div:last-child {
