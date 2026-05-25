@@ -1,5 +1,4 @@
-/* Hero CTA — SPEAK Network (brushstroke background, white text)
-   Live site: height-435 mobile/tablet, height-lg-380 desktop, pt-150/pt-md-200/pt-lg-30 */
+/* Hero CTA — SPEAK Network */
 /* stylelint-disable no-descending-specificity */
 .hero-cta-container {
   margin: 0;
@@ -65,7 +64,7 @@
   color: #fff;
   width: 100%;
   max-width: unset;
-  padding: 150px 20px 20px 30px;
+  padding: 150px 20px 20px;
   text-align: left;
 }
 
@@ -76,22 +75,24 @@
   font-weight: 700;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
   margin: 0 0 10px;
-  line-height: 1.2;
+  line-height: 1.3;
   max-width: unset;
 }
 
 .hero-cta p {
   color: #fff;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 6px;
-  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.375;
+  margin: 0 0 8px;
+  font-weight: normal;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .hero-cta a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .hero-cta a:hover {
@@ -109,9 +110,9 @@
 .hero-cta p:has(a[href^="mailto:"])::before {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 18px;
-  margin-right: 8px;
+  width: 28px;
+  height: 22px;
+  margin-right: 10px;
   vertical-align: middle;
   background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-email_r16_allviews.svg");
   background-size: contain;
@@ -128,9 +129,9 @@
 .hero-cta p:has(a[href^="tel:"])::before {
   content: '';
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
   vertical-align: middle;
   background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-phone_r16_allviews.svg");
   background-size: contain;
@@ -162,27 +163,43 @@
   text-decoration: underline;
 }
 
-/* Mobile (< 601px): height 435px, pt-150, image object-position 30% top */
+/* Mobile (< 601px): height 435px, pt-150 */
 @media (width < 601px) {
+  .hero-cta {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
   .hero-cta > div:first-child picture > img {
-    object-position: 30% top;
+    object-position: 25% center;
   }
 
   .hero-cta > div:last-child {
-    padding: 150px 20px 20px 30px;
+    padding: 150px 20px 20px;
+  }
+
+  .hero-cta h1,
+  .hero-cta h2 {
+    font-size: 20px;
+  }
+
+  .hero-cta p {
+    font-size: 14px;
   }
 }
 
-/* Tablet (601px–984px): height 435px, pt-200, image shifted left */
+/* Tablet (601px–984px): height 435px, pt-200 */
 @media (width >= 601px) and (width < 985px) {
+  .hero-cta {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
   .hero-cta > div:first-child picture > img {
-    object-position: 15% center;
+    object-position: 20% center;
   }
 
   .hero-cta > div:last-child {
-    width: 100%;
-    max-width: unset;
-    text-align: left;
     padding: 200px 30px 20px;
   }
 
@@ -196,13 +213,8 @@
   }
 }
 
-/* Desktop (985px+): height 380px, text on right, max-width 960px */
+/* Desktop (985px+): height 380px, text right 45% */
 @media (width >= 985px) {
-  .hero-cta-container .hero-cta-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
   .hero-cta {
     height: 380px;
   }
@@ -213,7 +225,7 @@
 
   .hero-cta > div:last-child {
     width: 45%;
-    max-width: 450px;
+    max-width: 480px;
     margin-left: auto;
     padding: 30px 40px;
   }
@@ -221,10 +233,13 @@
   .hero-cta h1,
   .hero-cta h2 {
     font-size: 24px;
+    margin: 0 0 15px;
   }
 
   .hero-cta p {
     font-size: 16px;
+    margin: 0 0 10px;
+    line-height: 1.375;
   }
 }
 /* stylelint-enable no-descending-specificity */
