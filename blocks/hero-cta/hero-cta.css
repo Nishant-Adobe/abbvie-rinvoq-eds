@@ -1,4 +1,4 @@
-/* Hero CTA — SPEAK Network (dark brushstroke background, white text) */
+/* Hero CTA — SPEAK Network (brushstroke background, white text) */
 /* stylelint-disable no-descending-specificity */
 .hero-cta-container .hero-cta-wrapper {
   max-width: unset;
@@ -11,17 +11,16 @@
 
 .hero-cta {
   position: relative;
-  padding: 0;
-  height: 435px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
   background-color: #1a1a1a;
+  min-height: 280px;
+  padding: 20px;
 }
 
-/* Background image — first div child (absolute cover) */
+/* Background image — fills block */
 .hero-cta > div:first-child {
   position: absolute;
   inset: 0;
@@ -50,43 +49,39 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
   position: absolute;
   inset: 0;
   max-width: none;
 }
 
-/* Text content — white text, positioned over the brushstroke */
+/* Text content — white, right side */
 .hero-cta > div:last-child {
   position: relative;
   z-index: 1;
   color: #fff;
-  width: 100%;
+  width: 50%;
   max-width: 500px;
-  padding: 0 20px 20px;
-  text-align: center;
-}
-
-.hero-cta > div:last-child > div {
-  max-width: 100%;
+  padding: 20px 0;
+  text-align: left;
 }
 
 .hero-cta h1,
 .hero-cta h2 {
   color: #fff;
-  font-size: 22px;
+  font-size: 1.4em;
   font-weight: 700;
   font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
-  margin: 0 0 12px;
+  margin: 0 0 0.5em;
   line-height: 1.2;
   max-width: unset;
 }
 
 .hero-cta p {
   color: #fff;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 10px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin: 0 0 0.5em;
   font-weight: 700;
 }
 
@@ -111,9 +106,9 @@
 .hero-cta p:has(a[href^="mailto:"])::before {
   content: '';
   display: inline-block;
-  width: 28px;
-  height: 20px;
-  margin-right: 10px;
+  width: 24px;
+  height: 18px;
+  margin-right: 8px;
   vertical-align: middle;
   background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-email_r16_allviews.svg");
   background-size: contain;
@@ -130,9 +125,9 @@
 .hero-cta p:has(a[href^="tel:"])::before {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
   vertical-align: middle;
   background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-phone_r16_allviews.svg");
   background-size: contain;
@@ -151,7 +146,7 @@
   padding: 0;
   margin: 0;
   color: #fff;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
   white-space: normal;
   text-align: left;
@@ -164,69 +159,47 @@
   text-decoration: underline;
 }
 
-/* Tablet (601px+) — height 435px, text right */
-@media (width >= 601px) {
+/* Small screens — stack vertically */
+@media (width < 601px) {
   .hero-cta {
-    height: 435px;
-    flex-direction: row;
-    align-items: center;
+    min-height: 435px;
+    flex-direction: column;
     justify-content: flex-end;
-    padding: 20px 30px;
-  }
-
-  .hero-cta > div:first-child img {
-    object-position: center center;
+    align-items: center;
+    padding: 20px;
   }
 
   .hero-cta > div:last-child {
-    width: 50%;
-    max-width: 450px;
-    text-align: left;
-    padding: 0;
-  }
-
-  .hero-cta h1,
-  .hero-cta h2 {
-    font-size: 18px;
-    margin: 0 0 8px;
-  }
-
-  .hero-cta p {
-    font-size: 13px;
-    margin: 0 0 6px;
-  }
-
-  .hero-cta .button-container a.button {
-    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px 20px;
   }
 }
 
-/* Desktop (985px+) — height 380px */
+/* Tablet+ (601px) */
+@media (width >= 601px) {
+  .hero-cta {
+    min-height: 380px;
+  }
+}
+
+/* Desktop (985px+) */
 @media (width >= 985px) {
   .hero-cta {
-    height: 380px;
     padding: 30px 50px;
   }
 
   .hero-cta > div:last-child {
     width: 40%;
-    max-width: 500px;
-    padding: 10px 0;
   }
 
   .hero-cta h1,
   .hero-cta h2 {
-    font-size: 22px;
-    margin: 0 0 12px;
+    font-size: 1.6em;
   }
 
   .hero-cta p {
-    font-size: 15px;
-    margin: 0 0 10px;
-  }
-
-  .hero-cta .button-container a.button {
-    font-size: 15px;
+    font-size: 1em;
   }
 }
 
@@ -234,19 +207,5 @@
 @media (width >= 1200px) {
   .hero-cta {
     padding: 30px 80px;
-  }
-
-  .hero-cta h1,
-  .hero-cta h2 {
-    font-size: 26px;
-    margin: 0 0 16px;
-  }
-
-  .hero-cta p {
-    font-size: 16px;
-  }
-
-  .hero-cta .button-container a.button {
-    font-size: 16px;
   }
 }
