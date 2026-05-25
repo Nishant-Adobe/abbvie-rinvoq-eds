@@ -47,7 +47,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 40%;
   position: absolute;
   inset: 0;
   max-width: none;
@@ -94,6 +94,44 @@
 .hero-cta a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+/* Email icon — paragraph containing mailto link */
+.hero-cta p a[href^="mailto:"] {
+  text-decoration: underline;
+  text-decoration-color: #90124a;
+  text-underline-offset: 3px;
+}
+
+.hero-cta p:has(a[href^="mailto:"])::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-email_r16_allviews.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Phone icon — paragraph containing tel link */
+.hero-cta p a[href^="tel:"] {
+  text-decoration: underline;
+  text-decoration-color: #90124a;
+  text-underline-offset: 3px;
+}
+
+.hero-cta p:has(a[href^="tel:"])::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/speak-network-phone_r16_allviews.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Reset button auto-decoration — links should be plain white text */
