@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  background-color: #25282a;
 }
 
 /* Background image — first div child (absolute cover) */
@@ -48,8 +49,8 @@
 .hero-cta > div:first-child img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;
+  object-position: center top;
   position: absolute;
   inset: 0;
   max-width: none;
@@ -167,10 +168,15 @@
 @media (width >= 601px) {
   .hero-cta {
     min-height: 435px;
-    padding: 200px 30px 0;
+    padding: 30px;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  .hero-cta > div:first-child img {
+    object-fit: cover;
+    object-position: center center;
   }
 
   .hero-cta > div:last-child {
