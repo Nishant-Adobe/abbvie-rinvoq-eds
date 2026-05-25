@@ -3,6 +3,7 @@
 /* stylelint-disable no-descending-specificity */
 .hero-cta-container {
   margin: 0;
+  padding: 0;
 }
 
 .hero-cta-container .hero-cta-wrapper {
