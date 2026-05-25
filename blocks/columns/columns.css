@@ -82,6 +82,8 @@
    Homepage columns-value variant
    Two-column: yellow (savings) + white (about)
    ======================================== */
+
+/* stylelint-disable no-descending-specificity */
 .columns.columns-value-2-cols {
   background: none;
   padding: 0;
@@ -175,3 +177,4 @@
     width: 50%;
   }
 }
+/* stylelint-enable no-descending-specificity */

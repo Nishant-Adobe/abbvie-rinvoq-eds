@@ -390,6 +390,8 @@ main > .section:nth-last-of-type(3) .default-content-wrapper .button-container a
    Homepage-specific styles
    ======================================== */
 
+/* stylelint-disable no-descending-specificity */
+
 /* Eligibility terms — small gray fine-print */
 .hero-container + .section > .default-content-wrapper p,
 main > .section:nth-last-of-type(3).carousel-container ~ .section:not(:last-of-type) > .default-content-wrapper p {
@@ -441,3 +443,5 @@ main > .section.grey > .default-content-wrapper:last-child p {
   text-align: left;
   max-width: unset;
 }
+
+/* stylelint-enable no-descending-specificity */

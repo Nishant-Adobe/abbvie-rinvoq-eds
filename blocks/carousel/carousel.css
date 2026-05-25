@@ -64,7 +64,7 @@
   color: #fff;
   background-color: transparent;
   max-width: 400px;
-  text-shadow: 1px 4px 2px rgba(63, 63, 63, 0.5), 0 0 1em rgba(63, 63, 63, 0.3);
+  text-shadow: 1px 4px 2px rgb(63 63 63 / 50%), 0 0 1em rgb(63 63 63 / 30%);
 }
 
 .carousel .carousel-slide .carousel-slide-content p {
@@ -81,6 +81,7 @@
   margin: 8px 0 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-slide .carousel-slide-content img {
   max-width: 180px;
   height: auto;
@@ -187,6 +188,6 @@
   }
 
   .carousel .carousel-slide .carousel-slide-content {
-    margin: 80px 80px;
+    margin: 80px;
   }
 }
