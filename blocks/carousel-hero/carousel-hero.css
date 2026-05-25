@@ -67,6 +67,9 @@
   background-color: transparent;
   max-width: 600px;
   text-shadow: 1px 4px 2px rgb(63 63 63 / 50%), 0 0 1em rgb(63 63 63 / 30%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content p {
@@ -74,23 +77,59 @@
   margin: 0 0 4px;
   font-size: 20px;
   font-weight: 700;
-  font-family: "Helvetica Neue", arial, sans-serif;
+  font-family: var(--font-family-heading);
+  width: 100%;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content p:nth-child(1) {
+  order: 2;
+  width: auto;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content p:nth-child(2) {
+  order: 1;
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content p:nth-child(3) {
+  order: 3;
+  font-size: 20px;
+  width: auto;
+  margin: 0 0 4px;
 }
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content h1 {
+  order: 4;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  font-family: "Helvetica Neue", arial, sans-serif;
+  font-family: var(--font-family-body);
   line-height: 1.3;
   margin: 8px 0 0;
+  width: 100%;
 }
 
 /* Relief brushstroke SVG — large */
 /* stylelint-disable-next-line no-descending-specificity */
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content img {
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
+}
+
+/* Desktop: larger text sizes */
+@media (width >= 985px) {
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-content p:nth-child(2) {
+    font-size: 32px;
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-content p:nth-child(3) {
+    font-size: 22px;
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-content img {
+    max-width: 250px;
+  }
 }
 
 /* Slide indicators — positioned at bottom of carousel */
