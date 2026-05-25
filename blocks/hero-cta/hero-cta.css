@@ -47,7 +47,7 @@
   width: 100%;
 }
 
-.hero-cta > div:first-child img {
+.hero-cta > div:first-child picture > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -163,7 +163,7 @@
 
 /* Mobile (< 601px): height 435px, pt-150, image object-position 30% top */
 @media (width < 601px) {
-  .hero-cta > div:first-child img {
+  .hero-cta > div:first-child picture > img {
     object-position: 30% top;
   }
 
@@ -174,7 +174,7 @@
 
 /* Tablet (601px–984px): height 435px, pt-200, image shifted left */
 @media (width >= 601px) and (width < 985px) {
-  .hero-cta > div:first-child img {
+  .hero-cta > div:first-child picture > img {
     object-position: 15% center;
   }
 
@@ -206,7 +206,7 @@
     height: 380px;
   }
 
-  .hero-cta > div:first-child img {
+  .hero-cta > div:first-child picture > img {
     object-position: left center;
   }
 
