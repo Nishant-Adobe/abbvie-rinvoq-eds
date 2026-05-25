@@ -1,0 +1,41 @@
+{
+  "variantName": "hero-cta",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/",
+    "originPage": "pharmaceutical homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "cta-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + heading + paragraph + contact info",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-width call-to-action banners with background imagery",
+      "community or advocacy program callouts",
+      "patient story or testimonial invitation sections",
+      "dark background hero sections with text overlay"
+    ],
+    "notSuitableFor": [
+      "page-top hero banners with navigation",
+      "light background hero sections",
+      "hero sections with prominent CTA buttons",
+      "product-focused hero blocks"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index", "/atopic-dermatitis/about-eczema/working-with-your-dermatologist"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-25T07:10:00.000Z"
+  }
+}

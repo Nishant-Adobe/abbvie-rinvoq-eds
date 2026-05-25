@@ -1,0 +1,8 @@
+{
+  "mappings": [
+    "/content/multirepo-rinvoq/:/"
+  ],
+  "includes": [
+    "/content/multirepo-rinvoq/"
+  ]
+}

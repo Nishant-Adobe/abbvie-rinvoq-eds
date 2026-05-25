@@ -1,0 +1,452 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "faq-page",
+      "urls": [
+        "https://www.rinvoq.com/atopic-dermatitis/about-rinvoq/faq"
+      ],
+      "description": "FAQ page with categorized accordion sections for atopic dermatitis product information",
+      "blocks": [
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".faqs-accordion"
+          ]
+        },
+        {
+          "name": "columns-safety",
+          "instances": [
+            ".abbv-select-safety-inf"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "FAQ Title and Topic Navigation",
+          "selector": "main section:first-of-type .faq-header",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h1",
+            "p",
+            ".faq-anchor-links a"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "About Eczema FAQ",
+          "selector": ".accordion.parbase:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".abbv-accordion-module-name"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "About RINVOQ FAQ",
+          "selector": ".accordion.parbase:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".abbv-accordion-module-name"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Important Safety Information Callout",
+          "selector": ".image-text-v2.parbase",
+          "style": "grey",
+          "blocks": [
+            "columns-safety"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Taking RINVOQ FAQ",
+          "selector": ".accordion.parbase:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".abbv-accordion-module-name"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Savings and Support FAQ",
+          "selector": ".accordion.parbase:nth-of-type(4)",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            ".abbv-accordion-module-name"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Suggested For You",
+          "selector": ".suggested-for-you",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "p"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "ISI",
+          "selector": "#abbv_use_statement",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h3",
+            "p",
+            "ul"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.rinvoq.com/"
+      ],
+      "description": "Rinvoq homepage with hero carousel, condition navigation, value proposition, and brand messaging",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".carousel.parbase"
+          ]
+        },
+        {
+          "name": "cards-condition",
+          "instances": [
+            ".homepage-cta-flex-box.conditions"
+          ]
+        },
+        {
+          "name": "columns-value",
+          "instances": [
+            ".cost-and-savings-link"
+          ]
+        },
+        {
+          "name": "hero-cta",
+          "instances": [
+            ".abbv-background-container.height-435"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".carousel.parbase",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Condition Selector",
+          "selector": ".homepage-cta-flex-box.conditions",
+          "style": "grey",
+          "blocks": [
+            "cards-condition"
+          ],
+          "defaultContent": [
+            "p"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Value Proposition",
+          "selector": ".cost-and-savings-link",
+          "style": null,
+          "blocks": [
+            "columns-value"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "SPEAK Network CTA",
+          "selector": ".abbv-background-container.height-435",
+          "style": null,
+          "blocks": [
+            "hero-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Eligibility Terms",
+          "selector": "#eligibilityTandC",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "p"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "ISI",
+          "selector": "#abbv_use_statement",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h3",
+            "p",
+            "ul"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "condition-landing",
+      "urls": [
+        "https://www.rinvoq.com/atopic-dermatitis"
+      ],
+      "description": "Condition landing page for atopic dermatitis with hero, results preview, savings, and safety info",
+      "blocks": [
+        {
+          "name": "hero-condition",
+          "instances": [
+            ".abbv-background-container.desktop-header"
+          ]
+        },
+        {
+          "name": "columns-efficacy",
+          "instances": [
+            ".helps-deliver-sectionx"
+          ]
+        },
+        {
+          "name": "columns-poll",
+          "instances": [
+            ".target-rcmd-quickpoll"
+          ]
+        },
+        {
+          "name": "columns-stories",
+          "instances": [
+            ".abbv-flex-container.pt-35"
+          ]
+        },
+        {
+          "name": "columns-tout",
+          "instances": [
+            ".target-rcmd-enhancementout"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".abbv-background-container.desktop-header",
+          "style": null,
+          "blocks": [
+            "hero-condition"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Indication",
+          "selector": ".indication-statement",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "p"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Efficacy",
+          "selector": ".helps-deliver-sectionx",
+          "style": null,
+          "blocks": [
+            "columns-efficacy"
+          ],
+          "defaultContent": [
+            "h1",
+            "p",
+            "a"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Safety Callout",
+          "selector": ".select-isi",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "p",
+            "ul",
+            "a"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Quick Poll",
+          "selector": ".target-rcmd-quickpoll",
+          "style": "grey",
+          "blocks": [
+            "columns-poll"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Patient Stories",
+          "selector": ".abbv-flex-container.pt-35",
+          "style": null,
+          "blocks": [
+            "columns-stories"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Quiz Tout",
+          "selector": ".target-rcmd-enhancementout",
+          "style": "gold",
+          "blocks": [
+            "columns-tout"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "ISI",
+          "selector": "#abbv_use_statement",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h3",
+            "p",
+            "ul"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dermatologist-page",
+      "urls": [
+        "https://www.rinvoq.com/atopic-dermatitis/about-eczema/working-with-your-dermatologist"
+      ],
+      "description": "Working with your dermatologist - doctor discussion and preparation page",
+      "blocks": [
+        {
+          "name": "hero-condition",
+          "instances": [
+            ".abbv-background-container.desktop-header"
+          ]
+        },
+        {
+          "name": "columns-kit",
+          "instances": [
+            ".doctor-visit-kit"
+          ]
+        },
+        {
+          "name": "hero-cta",
+          "instances": [
+            ".patient-testimonial"
+          ]
+        },
+        {
+          "name": "columns-poll",
+          "instances": [
+            ".target-rcmd-quickpoll"
+          ]
+        },
+        {
+          "name": "columns-tout",
+          "instances": [
+            ".target-rcmd-enhancementout"
+          ]
+        },
+        {
+          "name": "columns-nav",
+          "instances": [
+            ".bottom-nav-links"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "eczema-pictures",
+      "urls": [
+        "https://www.rinvoq.com/atopic-dermatitis/rinvoq-results/eczema-pictures"
+      ],
+      "description": "Eczema before-and-after pictures and results page",
+      "blocks": [
+        {
+          "name": "hero-results",
+          "instances": [
+            ".before-after-hero"
+          ]
+        },
+        {
+          "name": "carousel-compare",
+          "instances": [
+            ".before-after-carousel"
+          ]
+        },
+        {
+          "name": "accordion-safety",
+          "instances": [
+            ".safety-expandable"
+          ]
+        },
+        {
+          "name": "columns-kit",
+          "instances": [
+            ".doctor-visit-kit"
+          ]
+        },
+        {
+          "name": "hero-testimonial",
+          "instances": [
+            ".patient-quote-hero"
+          ]
+        },
+        {
+          "name": "columns-poll",
+          "instances": [
+            ".target-rcmd-quickpoll"
+          ]
+        },
+        {
+          "name": "columns-tout",
+          "instances": [
+            ".target-rcmd-enhancementout"
+          ]
+        },
+        {
+          "name": "columns-nav",
+          "instances": [
+            ".bottom-nav-links"
+          ]
+        }
+      ]
+    }
+  ]
+}

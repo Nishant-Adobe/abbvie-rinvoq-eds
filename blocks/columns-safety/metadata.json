@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-safety",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-23T04:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/about-rinvoq/faq",
+    "originPage": "pharmaceutical FAQ page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "safety-callout",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + text + bullet list + link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "safety information callouts",
+      "warning boxes with icon and text",
+      "pharmaceutical ISI summary sections",
+      "important notice sections"
+    ],
+    "notSuitableFor": [
+      "equal-weight multi-column layouts",
+      "image galleries",
+      "comparison tables",
+      "marketing content side-by-side"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/about-rinvoq/faq"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-23T04:47:00.000Z"
+  }
+}

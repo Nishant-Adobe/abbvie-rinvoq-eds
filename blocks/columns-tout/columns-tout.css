@@ -1,0 +1,33 @@
+.columns-tout > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-tout img {
+  width: 100%;
+}
+
+.columns-tout > div > div {
+  order: 1;
+}
+
+.columns-tout > div > .columns-tout-img-col {
+  order: 0;
+}
+
+.columns-tout > div > .columns-tout-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-tout > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-tout > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

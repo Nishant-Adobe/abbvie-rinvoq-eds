@@ -1,0 +1,108 @@
+.accordion details {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.accordion details summary {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  background-color: #fff;
+  border-left: 10px solid rgb(252 209 2);
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details summary p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  color: #25282a;
+  line-height: 18px;
+  margin: 0;
+}
+
+.accordion details summary::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #90124a;
+}
+
+.accordion details summary::after {
+  content: '+';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.accordion details[open] summary {
+  background-color: rgb(252 209 2);
+}
+
+.accordion details[open] summary::after {
+  content: '\2212';
+}
+
+.accordion details .accordion-item-body,
+.accordion details .accordion-faq-item-body {
+  padding: 16px 16px 16px 50px;
+  background-color: #f3f3f3;
+}
+
+.accordion details:not([open]) .accordion-item-body,
+.accordion details:not([open]) .accordion-faq-item-body {
+  display: none;
+}
+
+.accordion details .accordion-item-body p,
+.accordion details .accordion-faq-item-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+  color: #25282a;
+}
+
+.accordion details .accordion-item-body ul,
+.accordion details .accordion-faq-item-body ul {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 20px;
+  margin-bottom: 0.8em;
+}
+
+.accordion details .accordion-item-body a,
+.accordion details .accordion-faq-item-body a,
+.accordion details .accordion-item-body .button-container a.button,
+.accordion details .accordion-faq-item-body .button-container a.button {
+  color: #90124a;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: normal;
+  text-align: left;
+}

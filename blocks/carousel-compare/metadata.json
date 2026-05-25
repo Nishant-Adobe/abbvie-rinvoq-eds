@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-compare",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-25T07:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/rinvoq-results/eczema-pictures",
+    "originPage": "eczema before-and-after pictures results page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "before-after-comparison",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "before/after image pairs + thumbnail navigation + toggle buttons",
+    "buttonCount": 2,
+    "imageCount": 8
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "before-and-after comparison sliders",
+      "clinical trial result photo galleries",
+      "image comparison tools with drag slider interaction",
+      "treatment result photo showcases with body-part categories"
+    ],
+    "notSuitableFor": [
+      "simple rotating image carousels",
+      "hero banner carousels",
+      "text-based content carousels",
+      "single-image displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

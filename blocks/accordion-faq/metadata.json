@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-05-23T04:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/about-rinvoq/faq",
+    "originPage": "pharmaceutical FAQ page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "faq",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "category label + expandable Q&A items",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "FAQ pages",
+      "Q&A sections",
+      "help and support pages",
+      "pharmaceutical information pages"
+    ],
+    "notSuitableFor": [
+      "product feature showcases",
+      "pages requiring all content visible at once",
+      "content with heavy media/images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/about-rinvoq/faq"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-23T04:47:00.000Z"
+  }
+}

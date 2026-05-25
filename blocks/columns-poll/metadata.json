@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-poll",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis",
+    "originPage": "pharmaceutical condition landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "interactive-poll",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "branding image + question + option buttons + conditional result panels",
+    "buttonCount": 3,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "interactive quick polls with conditional results",
+      "patient engagement quizzes on condition pages",
+      "question-based CTAs with multiple response options",
+      "doctor visit scheduling prompts"
+    ],
+    "notSuitableFor": [
+      "simple two-column text + image layouts",
+      "static informational content",
+      "multi-step forms or wizards",
+      "data collection surveys"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis", "/atopic-dermatitis/about-eczema/working-with-your-dermatologist", "/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 3,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

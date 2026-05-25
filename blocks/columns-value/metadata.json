@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-value",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/",
+    "originPage": "pharmaceutical homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "value-proposition",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "logo + heading + paragraph + CTA | icon + heading + paragraphs + image",
+    "buttonCount": 1,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage value proposition sections with split backgrounds",
+      "savings/cost information paired with product details",
+      "two-column layouts with distinct background colors per column",
+      "pharmaceutical cost and benefits sections"
+    ],
+    "notSuitableFor": [
+      "simple text-only columns",
+      "image gallery layouts",
+      "equal-weight informational columns",
+      "safety or warning callout sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:35:00.000Z"
+  }
+}

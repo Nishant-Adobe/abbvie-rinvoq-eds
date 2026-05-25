@@ -1,0 +1,41 @@
+{
+  "variantName": "hero-testimonial",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-25T07:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/rinvoq-results/eczema-pictures",
+    "originPage": "eczema before-and-after pictures results page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "patient-testimonial",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background patient photo + overlaid quote text + CTA button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "patient testimonial banners with background photos",
+      "quote sections with overlaid text on patient imagery",
+      "full-width patient story CTAs with background photos",
+      "testimonial sections linking to patient story videos"
+    ],
+    "notSuitableFor": [
+      "simple text quote blocks without background imagery",
+      "hero banners with dark gradients",
+      "video background hero sections",
+      "hero sections without patient photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

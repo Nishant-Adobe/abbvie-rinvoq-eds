@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-results",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-25T07:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/rinvoq-results/eczema-pictures",
+    "originPage": "eczema before-and-after pictures results page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "results-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "video/image background only (no overlay text)",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "results pages with video/image hero backgrounds",
+      "before-and-after treatment results pages",
+      "pages where hero is purely visual (no text overlay)",
+      "clinical results showcase pages"
+    ],
+    "notSuitableFor": [
+      "hero sections with overlay text or CTAs",
+      "simple text-based hero banners",
+      "hero sections with dark backgrounds and white text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

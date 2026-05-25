@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.rinvoq.com/",
+  "path": "index",
+  "timestamp": "2026-05-25T06:49:49.472Z",
+  "title": "RINVOQ® (upadacitinib) for RA, PsA, AD, AS, nr-axSpA, UC, CD, pJIA & JPsA",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards-condition",
+    "cards-condition",
+    "columns-value",
+    "hero-cta"
+  ]
+}

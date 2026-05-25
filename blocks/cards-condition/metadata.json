@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-condition",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/",
+    "originPage": "pharmaceutical homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "condition-navigation",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "severity label + condition name + footnote marker",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "condition/indication navigation grids",
+      "clickable tile grids linking to sub-pages",
+      "pharmaceutical condition selectors",
+      "compact navigation card grids without images"
+    ],
+    "notSuitableFor": [
+      "cards with prominent images",
+      "product feature showcases",
+      "content cards with long descriptions",
+      "team member or testimonial cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:35:00.000Z"
+  }
+}

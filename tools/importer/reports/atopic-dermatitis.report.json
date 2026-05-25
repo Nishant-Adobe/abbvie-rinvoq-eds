@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.rinvoq.com/atopic-dermatitis",
+  "path": "atopic-dermatitis",
+  "timestamp": "2026-05-25T07:07:57.470Z",
+  "title": "RINVOQ® (upadacitinib) for Eczema (Atopic Dermatitis)",
+  "template": "condition-landing",
+  "blocks": [
+    "hero-condition",
+    "columns-efficacy",
+    "columns-poll",
+    "columns-stories",
+    "columns-tout"
+  ]
+}

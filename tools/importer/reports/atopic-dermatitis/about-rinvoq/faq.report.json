@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.rinvoq.com/atopic-dermatitis/about-rinvoq/faq",
+  "path": "atopic-dermatitis/about-rinvoq/faq",
+  "timestamp": "2026-05-23T04:57:02.796Z",
+  "title": "FAQs - RINVOQ® (upadacitinib) for Eczema (Atopic Dermatitis)",
+  "template": "faq-page",
+  "blocks": [
+    "accordion-faq",
+    "accordion-faq",
+    "accordion-faq",
+    "accordion-faq",
+    "columns-safety"
+  ]
+}

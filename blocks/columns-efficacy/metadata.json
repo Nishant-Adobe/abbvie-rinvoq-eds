@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-efficacy",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis",
+    "originPage": "pharmaceutical condition landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "efficacy-results",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3 columns with styled headings + bullet lists",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "clinical efficacy results displays",
+      "three-column feature/benefit comparisons",
+      "pharmaceutical results grids with bullet points",
+      "condition landing pages showing treatment outcomes"
+    ],
+    "notSuitableFor": [
+      "two-column text + image layouts",
+      "columns with large images",
+      "side-by-side content with distinct background colors",
+      "interactive or tabbed content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T06:55:00.000Z"
+  }
+}

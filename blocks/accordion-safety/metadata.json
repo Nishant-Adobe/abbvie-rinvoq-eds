@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-safety",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-05-25T07:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/rinvoq-results/eczema-pictures",
+    "originPage": "eczema before-and-after pictures results page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "safety-expandable",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "yellow-underlined heading + bulleted safety warnings + expand/collapse toggle",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "safety information expandable sections",
+      "important warnings that can be collapsed",
+      "pharmaceutical safety callouts with expand/collapse",
+      "select important safety information sections"
+    ],
+    "notSuitableFor": [
+      "multi-item FAQ accordions",
+      "content accordions with many items",
+      "product feature expandable sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

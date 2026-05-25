@@ -1,0 +1,33 @@
+.columns-poll > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-poll img {
+  width: 100%;
+}
+
+.columns-poll > div > div {
+  order: 1;
+}
+
+.columns-poll > div > .columns-poll-img-col {
+  order: 0;
+}
+
+.columns-poll > div > .columns-poll-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-poll > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-poll > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-kit",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-25T07:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis/about-eczema/working-with-your-dermatologist",
+    "originPage": "pharmaceutical dermatologist working page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "promotional-kit",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "decorative background image | paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional tout sections for sign-up kits",
+      "two-column layouts with decorative image and text + CTA",
+      "doctor visit kit or resource download promotions",
+      "compact call-to-action banners with supporting imagery"
+    ],
+    "notSuitableFor": [
+      "interactive poll components",
+      "patient story sections with quotes",
+      "three-column layouts",
+      "accent/colored background sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis/about-eczema/working-with-your-dermatologist", "/atopic-dermatitis/rinvoq-results/eczema-pictures"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-25T07:15:00.000Z"
+  }
+}

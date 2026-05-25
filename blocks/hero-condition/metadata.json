@@ -1,0 +1,41 @@
+{
+  "variantName": "hero-condition",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-25T06:55:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.rinvoq.com/atopic-dermatitis",
+    "originPage": "pharmaceutical condition landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "condition-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "video/image background + overlay text + CTA button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "condition landing pages with video/image hero banners",
+      "pharmaceutical condition pages with animated backgrounds",
+      "full-width hero sections with overlay CTA buttons",
+      "pages with looping video hero backgrounds"
+    ],
+    "notSuitableFor": [
+      "simple text hero sections without background media",
+      "hero sections with multiple columns of content",
+      "hero sections focused on form submissions",
+      "carousel/rotating hero banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/atopic-dermatitis", "/atopic-dermatitis/about-eczema/working-with-your-dermatologist"],
+    "reuseCount": 2,
+    "lastUsed": "2026-05-25T07:10:00.000Z"
+  }
+}

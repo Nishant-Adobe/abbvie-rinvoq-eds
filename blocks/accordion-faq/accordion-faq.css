@@ -1,0 +1,87 @@
+.accordion-faq details {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.accordion-faq details summary {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  background-color: #fff;
+  border-left: 10px solid rgb(252 209 2);
+}
+
+.accordion-faq details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq details summary p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--ff-heading);
+  color: var(--color-text-primary);
+  line-height: 18px;
+  margin: 0;
+}
+
+.accordion-faq details summary::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-text-primary);
+}
+
+.accordion-faq details summary::after {
+  content: '+';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.accordion-faq details[open] summary::after {
+  content: '\2212';
+}
+
+.accordion-faq details .accordion-faq-item-body {
+  padding: 10px 10px 10px 50px;
+}
+
+.accordion-faq details:not([open]) .accordion-faq-item-body {
+  display: none;
+}
+
+.accordion-faq details .accordion-faq-item-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+  color: var(--color-text-primary);
+}
+
+.accordion-faq details .accordion-faq-item-body ul {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 20px;
+  margin-bottom: 0.8em;
+}
+
+.accordion-faq details .accordion-faq-item-body a {
+  color: var(--color-link);
+}

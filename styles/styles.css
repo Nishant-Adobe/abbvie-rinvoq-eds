@@ -1,0 +1,387 @@
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  /* colors — Rinvoq brand */
+  --background-color: white;
+  --light-color: #f5f5f5;
+  --dark-color: #25282a;
+  --text-color: #25282a;
+  --link-color: #90124a;
+  --link-hover-color: #710e3a;
+
+  /* fonts — Rinvoq brand */
+  --body-font-family: 'Helvetica Neue', arial, sans-serif;
+  --heading-font-family: 'Neue Haas Grotesk Disp', arial, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 26px;
+  --heading-font-size-xl: 26px;
+  --heading-font-size-l: 20px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+
+  /* nav height */
+  --nav-height: 64px;
+}
+
+/* fallback fonts */
+@font-face {
+  font-family: roboto-condensed-fallback;
+  size-adjust: 88.82%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: roboto-fallback;
+  size-adjust: 99.529%;
+  src: local('Arial');
+}
+
+@media (width >= 900px) {
+  :root {
+    /* body sizes */
+    --body-font-size-m: 18px;
+    --body-font-size-s: 16px;
+    --body-font-size-xs: 14px;
+
+    /* heading sizes */
+    --heading-font-size-xxl: 26px;
+    --heading-font-size-xl: 26px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 14px;
+  }
+}
+
+body {
+  display: none;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+}
+
+body.appear {
+  display: block;
+}
+
+header {
+  height: var(--nav-height);
+}
+
+header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  scroll-margin: 40px;
+}
+
+h1 { font-size: var(--heading-font-size-xxl); }
+h2 { font-size: var(--heading-font-size-xl); }
+h3 { font-size: var(--heading-font-size-l); }
+h4 { font-size: var(--heading-font-size-m); }
+h5 { font-size: var(--heading-font-size-s); }
+h6 { font-size: var(--heading-font-size-xs); }
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+code,
+pre {
+  font-size: var(--body-font-size-s);
+}
+
+pre {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--light-color);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+main > div {
+  margin: 40px 16px;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* links */
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* buttons */
+a.button:any-link,
+button {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 12px 0;
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  padding: 0.5em 1.2em;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--link-color);
+  color: var(--background-color);
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--light-color);
+  cursor: unset;
+}
+
+a.button.secondary,
+button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* sections */
+main > .section {
+  margin: 40px 0;
+}
+
+main > .section > div {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+main > .section:first-of-type {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  main > .section > div {
+    padding: 0 32px;
+  }
+}
+
+/* section metadata */
+main .section.light,
+main .section.highlight {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.grey {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* FAQ page: jump links as inline horizontal text links */
+.accordion-container > .default-content-wrapper > ul:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0.8em 0;
+}
+
+.accordion-container > .default-content-wrapper > ul:first-of-type li {
+  margin: 0;
+}
+
+.accordion-container > .default-content-wrapper > ul:first-of-type a {
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.accordion-container > .default-content-wrapper > ul:first-of-type a::after {
+  content: '\276F';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #90124a;
+  color: #fff;
+  font-size: 9px;
+  line-height: 1;
+  margin-left: 6px;
+  vertical-align: middle;
+  transform: rotate(90deg);
+}
+
+.accordion-container > .default-content-wrapper > ul:first-of-type a:hover {
+  text-decoration: underline;
+}
+
+/* stylelint-disable no-descending-specificity */
+
+/* Category headings (About Eczema, Taking RINVOQ, etc.) */
+.accordion-container > .default-content-wrapper + .accordion-wrapper + .default-content-wrapper > p,
+.accordion-container > .accordion-wrapper + .default-content-wrapper > p,
+.accordion-container > .columns-safety-wrapper + .default-content-wrapper > p,
+.columns-safety-container > .columns-wrapper + .default-content-wrapper > p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  color: #25282a;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* First default-content-wrapper category heading (About Eczema) — after the ul */
+.accordion-container > .default-content-wrapper:first-child > p:last-child {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+  color: #25282a;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+/* ISI section: h3 with yellow brush underline */
+main > .section:nth-last-of-type(2) .default-content-wrapper h3 {
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  padding-bottom: 4px;
+}
+
+/* ISI section: bold sub-headings with yellow brush underline */
+main > .section:nth-last-of-type(2) .default-content-wrapper > p > strong:only-child {
+  display: inline;
+  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-family: "Neue Haas Grotesk Disp", Arial, sans-serif;
+}
+
+/* SUGGESTED FOR YOU eyebrow */
+main > .section:nth-last-of-type(3) .default-content-wrapper > p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(252 209 2), rgb(252 209 2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  padding-bottom: 4px;
+}
+
+/* SUGGESTED FOR YOU: CTA link as text (not button) */
+main > .section:nth-last-of-type(3) .default-content-wrapper .button-container a.button {
+  background: none;
+  color: #90124a;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: normal;
+  text-align: left;
+}
+
+main > .section:nth-last-of-type(3) .default-content-wrapper .button-container a.button::after {
+  content: ' \203A';
+  font-size: 18px;
+}
