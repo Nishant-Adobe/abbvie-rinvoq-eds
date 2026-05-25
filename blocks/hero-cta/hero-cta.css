@@ -160,7 +160,7 @@
   text-decoration: underline;
 }
 
-/* Mobile (< 601px): full 435px height, image as bg, text pushed down with pt-150 */
+/* Mobile (< 601px): full 435px, image covers block, pt-150 pushes text below logo */
 @media (width < 601px) {
   .hero-cta {
     height: 435px;
@@ -171,26 +171,26 @@
 
   .hero-cta > div:first-child img {
     object-fit: cover;
-    object-position: left center;
+    object-position: left top;
   }
 
   .hero-cta > div:last-child {
     width: 100%;
     max-width: unset;
-    text-align: center;
-    padding: 150px 20px 20px;
+    text-align: left;
+    padding: 150px 20px 20px 30px;
   }
 
   .hero-cta h1,
   .hero-cta h2 {
-    font-size: 18px;
-    margin: 0 0 8px;
+    font-size: 20px;
+    margin: 0 0 10px;
   }
 
   .hero-cta p {
-    font-size: 13px;
+    font-size: 14px;
     margin: 0 0 6px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 }
 
