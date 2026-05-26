@@ -69,6 +69,7 @@
   color: var(--color-text);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-efficacy p {
   font-size: 13px;
   line-height: 1.4;
