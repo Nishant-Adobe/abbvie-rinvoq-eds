@@ -1,33 +1,110 @@
+/* Columns Tout — Take This Quiz section */
+.columns-tout-container {
+  background-color: #f3f3f3;
+  padding: 40px 24px;
+}
+
 .columns-tout > div {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  max-width: 945px;
+  margin: 0 auto;
 }
 
-.columns-tout img {
+.columns-tout > div > div:first-child img:first-child {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.columns-tout > div > div:first-child p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0 0 12px;
+}
+
+.columns-tout > div > div:first-child p:first-child {
+  margin: 0 0 16px;
+}
+
+/* stylelint-disable no-descending-specificity */
+.columns-tout a.button {
+  all: unset;
+  display: inline-block;
+  background-color: #fff;
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  border-radius: 5px;
+  padding: 10px 42px 10px 10px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.columns-tout a.button::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--color-link);
+  border-right: 2px solid var(--color-link);
+}
+
+.columns-tout a.button:hover {
+  background-color: var(--color-link);
+  color: #fff;
+}
+
+.columns-tout a.button:hover::after {
+  border-color: #fff;
+}
+/* stylelint-enable no-descending-specificity */
+
+.columns-tout p.button-container {
+  margin: 16px 0 0;
+}
+
+.columns-tout > div > div:last-child {
+  position: relative;
+}
+
+.columns-tout > div > div:last-child img {
   width: 100%;
-}
-
-.columns-tout > div > div {
-  order: 1;
-}
-
-.columns-tout > div > .columns-tout-img-col {
-  order: 0;
-}
-
-.columns-tout > div > .columns-tout-img-col img {
+  height: auto;
   display: block;
+  border-radius: 0;
 }
 
-@media (width >= 900px) {
-  .columns-tout > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+@media (width >= 600px) {
+  .columns-tout-container {
+    padding: 50px;
+  }
+}
+
+@media (width >= 985px) {
+  .columns-tout-container {
+    padding: 60px 0;
   }
 
-  .columns-tout > div > div {
+  .columns-tout > div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .columns-tout > div > div:first-child {
     flex: 1;
-    order: unset;
+  }
+
+  .columns-tout > div > div:last-child {
+    flex: 1;
   }
 }
