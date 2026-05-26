@@ -80,6 +80,7 @@
 /* CTA link below the columns block */
 .columns-efficacy-container > .default-content-wrapper:last-child p {
   margin: 24px 0 0;
+  text-align: center;
 }
 
 .columns-efficacy-container > .default-content-wrapper:last-child a {
