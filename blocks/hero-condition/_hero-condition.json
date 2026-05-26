@@ -23,35 +23,23 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "video",
+          "name": "video_image",
           "label": "Video",
           "multi": false
         },
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "poster",
-          "label": "Poster Image",
-          "multi": false
-        },
-        {
           "component": "text",
           "valueType": "string",
-          "name": "posterAlt",
+          "name": "video_imageAlt",
           "label": "Poster Alt",
           "value": ""
         },
         {
-          "component": "aem-content",
-          "name": "cta",
-          "label": "CTA Link"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "ctaText",
-          "label": "CTA Text",
-          "value": ""
+          "component": "richtext",
+          "name": "cta_text",
+          "value": "",
+          "label": "CTA",
+          "valueType": "string"
         }
       ]
     }
