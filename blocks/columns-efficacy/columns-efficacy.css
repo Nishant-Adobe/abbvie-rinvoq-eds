@@ -1,33 +1,159 @@
+/* Columns Efficacy — 3-column clinical results layout */
+.columns-efficacy-container {
+  padding: 30px 24px;
+}
+
+.columns-efficacy-container > .default-content-wrapper h1 {
+  font-family: var(--font-family-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--color-text);
+  margin: 0 0 10px;
+}
+
+.columns-efficacy-container > .default-content-wrapper p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0 0 20px;
+}
+
 .columns-efficacy > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns-efficacy img {
-  width: 100%;
+  gap: 24px;
 }
 
 .columns-efficacy > div > div {
-  order: 1;
+  flex: 1;
 }
 
-.columns-efficacy > div > .columns-efficacy-img-col {
-  order: 0;
+.columns-efficacy h2 {
+  font-family: var(--font-family-heading);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--color-text);
+  margin: 0 0 12px;
+  position: relative;
+  padding-bottom: 8px;
 }
 
-.columns-efficacy > div > .columns-efficacy-img-col img {
-  display: block;
+.columns-efficacy h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  max-width: 180px;
+  height: 10px;
+  background-image: url('https://www.rinvoq.com/content/dam/rinvoq/images/homepage/ad/homepage/global/brushstroke-underline_r6_oneSize.png');
+  background-repeat: no-repeat;
+  background-size: 113% 10px;
 }
 
-@media (width >= 900px) {
-  .columns-efficacy > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+.columns-efficacy ul {
+  margin: 16px 0 0;
+  padding: 0 0 0 20px;
+}
+
+.columns-efficacy li {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0 0 16px;
+}
+
+.columns-efficacy li::marker {
+  color: var(--color-text);
+}
+
+.columns-efficacy p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 8px 0 0;
+}
+
+/* CTA link below the columns block */
+.columns-efficacy-container > .default-content-wrapper:last-child p {
+  margin: 24px 0 0;
+}
+
+.columns-efficacy-container > .default-content-wrapper:last-child a {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  border-radius: 5px;
+  padding: 10px 42px 10px 10px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  min-width: 250px;
+}
+
+.columns-efficacy-container > .default-content-wrapper:last-child a::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--color-link);
+  border-right: 2px solid var(--color-link);
+}
+
+.columns-efficacy-container > .default-content-wrapper:last-child a:hover {
+  background-color: var(--color-link);
+  color: #fff;
+}
+
+.columns-efficacy-container > .default-content-wrapper:last-child a:hover::after {
+  border-color: #fff;
+}
+
+@media (width >= 600px) {
+  .columns-efficacy-container {
+    padding: 40px 50px;
   }
 
-  .columns-efficacy > div > div {
-    flex: 1;
-    order: unset;
+  .columns-efficacy-container > .default-content-wrapper h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .columns-efficacy h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (width >= 985px) {
+  .columns-efficacy-container {
+    max-width: 945px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .columns-efficacy > div {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .columns-efficacy-container > .default-content-wrapper h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .columns-efficacy h2 {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
