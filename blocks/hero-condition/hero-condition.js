@@ -1,19 +1,27 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  if (rows.length < 1) return;
+  if (rows.length < 2) return;
 
-  const row = rows[0];
-  const cols = [...row.children];
-  const videoCol = cols[0];
-  const ctaCol = cols[1];
+  const imageRow = rows[0];
+  const textRow = rows[1];
 
-  const link = videoCol?.querySelector('a');
-  const img = videoCol?.querySelector('img');
+  const img = imageRow.querySelector('img');
+  const posterSrc = img?.getAttribute('src');
 
-  if (link && img) {
-    const videoSrc = link.getAttribute('href');
-    const posterSrc = img.getAttribute('src');
+  const links = textRow.querySelectorAll('a');
+  let videoSrc = null;
+  let ctaLink = null;
 
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && href.endsWith('.mp4')) {
+      videoSrc = href;
+    } else if (href) {
+      ctaLink = link;
+    }
+  });
+
+  if (videoSrc && posterSrc) {
     const video = document.createElement('video');
     video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
@@ -31,16 +39,13 @@ export default function decorate(block) {
     block.prepend(video);
   }
 
-  if (ctaCol) {
-    const ctaLink = ctaCol.querySelector('a');
-    if (ctaLink) {
-      ctaLink.className = 'hero-condition-cta';
-      const wrapper = document.createElement('div');
-      wrapper.className = 'hero-condition-cta-wrapper';
-      wrapper.append(ctaLink);
-      block.append(wrapper);
-    }
+  if (ctaLink) {
+    ctaLink.className = 'hero-condition-cta';
+    const wrapper = document.createElement('div');
+    wrapper.className = 'hero-condition-cta-wrapper';
+    wrapper.append(ctaLink);
+    block.append(wrapper);
   }
 
-  row.remove();
+  rows.forEach((row) => row.remove());
 }

@@ -456,22 +456,22 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "video_image",
-        "label": "Video",
+        "name": "image",
+        "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "video_imageAlt",
-        "label": "Poster Alt",
+        "name": "imageAlt",
+        "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "cta_text",
+        "name": "text",
         "value": "",
-        "label": "CTA",
+        "label": "Text",
         "valueType": "string"
       }
     ]
