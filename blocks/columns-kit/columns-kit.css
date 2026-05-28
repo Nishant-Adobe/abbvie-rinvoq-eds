@@ -105,7 +105,7 @@
     height: 100%;
     max-width: none;
     object-fit: cover;
-    object-position: 100% 50%;
+    object-position: left center;
   }
 
   .columns-kit > div > div:not(.columns-kit-img-col) {
