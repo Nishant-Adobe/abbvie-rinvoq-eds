@@ -77,9 +77,10 @@ function buildAutoBlocks() {
  */
 // eslint-disable-next-line import/prefer-default-export
 function decorateISIHeadings(main) {
-  const lastSection = main.querySelector('.section:last-of-type');
-  if (!lastSection) return;
-  lastSection.querySelectorAll('.default-content-wrapper > p > strong:only-child').forEach((strong) => {
+  const isiWrapper = main.querySelector('.default-content-wrapper:has(h3#use)')
+    || main.querySelector('.section:last-of-type .default-content-wrapper');
+  if (!isiWrapper) return;
+  isiWrapper.querySelectorAll('p > strong').forEach((strong) => {
     const text = strong.textContent.trim();
     if (text.endsWith('?') || text === 'USES') {
       strong.classList.add('isi-question-heading');
