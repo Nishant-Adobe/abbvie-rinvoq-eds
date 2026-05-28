@@ -33,10 +33,10 @@
 
 .columns-efficacy h2 {
   font-family: var(--font-family-heading);
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 28px;
-  color: var(--color-text);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--color-text-primary);
   margin: 0 0 12px;
   position: relative;
   padding-bottom: 8px;
