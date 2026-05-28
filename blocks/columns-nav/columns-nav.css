@@ -118,6 +118,20 @@
   }
 }
 
+/* stylelint-disable no-descending-specificity */
+
+/* Single-column (NEXT PAGE only) — align right */
+.columns-nav.columns-nav-1-cols > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.columns-nav.columns-nav-1-cols > div > div:last-child {
+  border-left: none;
+  padding: 30px 0;
+  text-align: right;
+}
+
 @media (width >= 985px) {
   .columns-nav-container {
     padding: 40px 0;
@@ -137,5 +151,9 @@
     flex: 1;
     padding: 30px 0 30px 40px;
     border-left: 1px solid var(--color-border);
+  }
+
+  .columns-nav.columns-nav-1-cols > div > div:last-child {
+    border-left: none;
   }
 }
