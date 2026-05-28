@@ -349,8 +349,9 @@ main .section.yellow {
   margin: var(--spacing-lg) 0;
 }
 
-/* ISI section — yellow brush underline on h3 headings (only in last section) */
-main > .section:last-of-type > .default-content-wrapper h3 {
+/* ISI section — yellow brush underline on h3 headings */
+main > .section:last-of-type > .default-content-wrapper h3,
+main .default-content-wrapper h3#use {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -360,7 +361,8 @@ main > .section:last-of-type > .default-content-wrapper h3 {
   margin-bottom: 0;
 }
 
-main > .section:last-of-type > .default-content-wrapper h3::after {
+main > .section:last-of-type > .default-content-wrapper h3::after,
+main .default-content-wrapper h3#use::after {
   content: '';
   display: block;
   width: 100%;
@@ -395,24 +397,28 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
 }
 
 /* ISI section — body text, lists, and spacing */
-main > .section:last-of-type > .default-content-wrapper {
+main > .section:last-of-type > .default-content-wrapper,
+main .default-content-wrapper:has(h3#use) {
   max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
-main > .section:last-of-type > .default-content-wrapper p {
+main > .section:last-of-type > .default-content-wrapper p,
+main .default-content-wrapper:has(h3#use) p {
   font-size: 16px;
   line-height: 1.375;
   color: var(--color-text-primary);
   margin: 0 0 20px;
 }
 
-main > .section:last-of-type > .default-content-wrapper ul {
+main > .section:last-of-type > .default-content-wrapper ul,
+main .default-content-wrapper:has(h3#use) ul {
   padding-left: 20px;
   margin: 0 0 16px;
 }
 
-main > .section:last-of-type > .default-content-wrapper li {
+main > .section:last-of-type > .default-content-wrapper li,
+main .default-content-wrapper:has(h3#use) li {
   font-size: 16px;
   line-height: 1.375;
   color: var(--color-text-primary);
