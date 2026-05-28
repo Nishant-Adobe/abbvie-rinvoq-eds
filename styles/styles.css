@@ -355,6 +355,9 @@ main > .section:last-of-type > .default-content-wrapper h3 {
   display: inline-block;
   padding-bottom: 10px;
   font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
 main > .section:last-of-type > .default-content-wrapper h3::after {
@@ -389,6 +392,31 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
   background-size: 100% 10px;
   position: absolute;
   bottom: 0;
+}
+
+/* ISI section — body text, lists, and spacing */
+main > .section:last-of-type > .default-content-wrapper {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+main > .section:last-of-type > .default-content-wrapper p {
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--color-text-primary);
+  margin: 0 0 20px;
+}
+
+main > .section:last-of-type > .default-content-wrapper ul {
+  padding-left: 20px;
+  margin: 0 0 16px;
+}
+
+main > .section:last-of-type > .default-content-wrapper li {
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--color-text-primary);
+  margin: 0 0 5px;
 }
 
 /* Brush highlight — yellow brushstroke behind text (e.g., "relief" in H1) */
