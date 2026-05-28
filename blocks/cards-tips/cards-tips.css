@@ -57,7 +57,9 @@
 
 /* stylelint-disable no-descending-specificity */
 
-.tip-content a {
+.tip-content a,
+.tip-content a.button:any-link,
+.tip-content a.button {
   all: unset;
   color: var(--color-link);
   font-family: var(--font-family-heading);
@@ -66,9 +68,16 @@
   text-decoration: none;
   display: inline;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
 }
 
-.tip-content a::after {
+.tip-content a::after,
+.tip-content a.button::after {
   content: '';
   display: inline-block;
   width: 13px;
@@ -80,8 +89,16 @@
   margin-left: 5px;
 }
 
-.tip-content a:hover {
+.tip-content a:hover,
+.tip-content a.button:hover {
   text-decoration: underline;
+  background-color: transparent;
+  color: var(--color-link);
+}
+
+.tip-content .button-container {
+  margin: 0;
+  padding: 0;
 }
 /* stylelint-enable no-descending-specificity */
 
