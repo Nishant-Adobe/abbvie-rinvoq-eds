@@ -18,7 +18,7 @@
 
 .columns-kit > div > .columns-kit-img-col img {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   height: auto;
   display: block;
 }
@@ -94,18 +94,19 @@
   }
 
   .columns-kit > div > .columns-kit-img-col {
-    flex: 0 0 35%;
+    flex: 0 0 40%;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
     order: unset;
+    display: flex;
+    align-items: center;
   }
 
   .columns-kit > div > .columns-kit-img-col img {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: none;
-    object-fit: cover;
-    object-position: left center;
+    object-fit: contain;
   }
 
   .columns-kit > div > div:not(.columns-kit-img-col) {
