@@ -366,8 +366,8 @@ main .section.yellow-brushstroke > .default-content-wrapper {
   line-height: 1.4;
 }
 
-/* Grey section: RINVOQ LQ image */
-.section.grey > .default-content-wrapper img {
+/* Grey section: RINVOQ LQ image (homepage only) */
+.section.grey > .default-content-wrapper:first-child img {
   max-width: 340px;
   display: block;
   margin: var(--spacing-lg) 0;
@@ -885,19 +885,19 @@ main .section.grey > .default-content-wrapper .button-container a.button:hover {
   color: var(--color-white);
 }
 
-main .section.grey > .default-content-wrapper > picture {
+main .section.grey > .default-content-wrapper:only-child > picture {
   display: block;
   margin-top: 20px;
 }
 
-main .section.grey > .default-content-wrapper > picture img {
+main .section.grey > .default-content-wrapper:only-child > picture img {
   max-width: 454px;
   width: 100%;
   height: auto;
 }
 
 @media (width >= 985px) {
-  main .section.grey > .default-content-wrapper {
+  main .section.grey > .default-content-wrapper:only-child {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -906,17 +906,17 @@ main .section.grey > .default-content-wrapper > picture img {
     overflow: hidden;
   }
 
-  main .section.grey > .default-content-wrapper > h2,
-  main .section.grey > .default-content-wrapper > .button-container {
+  main .section.grey > .default-content-wrapper:only-child > h2,
+  main .section.grey > .default-content-wrapper:only-child > .button-container {
     flex: 0 0 58%;
   }
 
-  main .section.grey > .default-content-wrapper > picture {
+  main .section.grey > .default-content-wrapper:only-child > picture {
     flex: 0 0 42%;
     margin-top: 0;
   }
 
-  main .section.grey > .default-content-wrapper > picture img {
+  main .section.grey > .default-content-wrapper:only-child > picture img {
     max-width: none;
     width: 430px;
   }
