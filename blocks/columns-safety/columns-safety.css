@@ -3,7 +3,7 @@
   padding: 30px 24px;
 }
 
-main .columns-safety-container.grey {
+main .columns-safety-container.grey:not(.accordion-faq-container) {
   background-color: #fff;
 }
 
@@ -17,7 +17,27 @@ main .columns-safety-container.grey {
   display: block;
 }
 
-.columns-safety.columns-safety-2-cols > div > div:first-child {
+/* FAQ page — show icon with flex layout */
+.accordion-faq-container .columns-safety.columns-safety-2-cols > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.accordion-faq-container .columns-safety.columns-safety-2-cols > div > div:first-child {
+  display: block;
+  flex-shrink: 0;
+  width: 80px;
+}
+
+.accordion-faq-container .columns-safety.columns-safety-2-cols > div > div:first-child img {
+  width: 80px;
+  height: auto;
+}
+
+/* Non-FAQ pages — hide icon column */
+/* stylelint-disable-next-line no-descending-specificity */
+.section:not(.accordion-faq-container) .columns-safety.columns-safety-2-cols > div > div:first-child {
   display: none;
 }
 
