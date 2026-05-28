@@ -1,5 +1,4 @@
 mountpoints:
   /:
-    url: "https://author-p160552-e1944799.adobeaemcloud.com/bin/franklin.delivery/nishant-adobe/abbvie-rinvoq-eds/main"
-    type: "markup"
-    suffix: ".html"
+    url: "https://github.com/Nishant-Adobe/abbvie-rinvoq-eds/tree/rinvoq-faq-clean/content"
+    suffix: ".plain.html"
