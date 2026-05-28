@@ -20,16 +20,13 @@
 .vp-thumb {
   position: relative;
   flex: 1;
-  border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
-  border: 3px solid transparent;
+  transition: opacity 0.2s;
 }
 
 .vp-thumb:hover {
-  opacity: 0.85;
-  transform: scale(1.02);
+  opacity: 0.8;
 }
 
 .vp-thumb img {
@@ -41,13 +38,11 @@
 }
 
 .vp-thumb-active {
-  border-color: var(--color-link);
   opacity: 1;
 }
 
 .vp-thumb-active:hover {
   opacity: 1;
-  transform: none;
 }
 
 .vp-play-icon {
@@ -93,7 +88,6 @@
 
 .vp-video {
   position: relative;
-  border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
 }
