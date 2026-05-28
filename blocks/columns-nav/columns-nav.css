@@ -1,13 +1,12 @@
 /* Columns Nav — Bottom page navigation (Suggested + Next Page) */
 .columns-nav-container {
   padding: 30px 24px;
-  border-top: 1px solid var(--color-border);
 }
 
 .columns-nav > div {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0;
   max-width: 945px;
   margin: 0 auto;
 }
@@ -16,9 +15,39 @@
   flex: 1;
 }
 
+/* SUGGESTED FOR YOU column */
+.columns-nav > div > div:first-child {
+  padding: 30px 0;
+}
+
+.columns-nav > div > div:first-child p strong {
+  font-family: var(--font-family-heading);
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.75px;
+  display: inline-block;
+  border-bottom: 3px solid rgb(253 209 3);
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+}
+
+/* NEXT PAGE column — dark background */
 .columns-nav > div > div:last-child {
-  border-top: 1px solid var(--color-border);
-  padding-top: 24px;
+  background-color: rgb(36 39 42);
+  padding: 24px;
+  color: var(--color-white);
+}
+
+.columns-nav > div > div:last-child p strong {
+  font-family: var(--font-family-heading);
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.75px;
+  color: var(--color-white);
+  display: inline-block;
+  border-bottom: 3px solid rgb(253 209 3);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .columns-nav p {
@@ -28,12 +57,8 @@
   margin: 0 0 12px;
 }
 
-.columns-nav p strong {
-  font-family: var(--font-family-heading);
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.columns-nav > div > div:last-child p {
+  color: var(--color-white);
 }
 
 .columns-nav p em {
@@ -45,43 +70,54 @@
   margin-top: 12px;
 }
 
+/* SUGGESTED FOR YOU link — inline maroon text */
 /* stylelint-disable no-descending-specificity */
-.columns-nav a.button {
+.columns-nav > div > div:first-child a.button {
   all: unset;
-  display: inline-block;
-  background-color: var(--color-white);
+  display: inline;
   color: var(--color-link);
-  border: 2px solid var(--color-link);
-  border-radius: 5px;
-  padding: 10px 42px 10px 10px;
   font-family: var(--font-family-heading);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   text-decoration: none;
-  position: relative;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
 }
 
-.columns-nav a.button::after {
-  content: '';
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid var(--color-link);
-  border-right: 2px solid var(--color-link);
+.columns-nav > div > div:first-child a.button::after {
+  content: ' >';
+  font-weight: 700;
 }
 
-.columns-nav a.button:hover {
-  background-color: var(--color-link);
+.columns-nav > div > div:first-child a.button:hover {
+  text-decoration: underline;
+}
+
+/* NEXT PAGE link — plain white text on dark bg */
+.columns-nav > div > div:last-child a.button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
   color: var(--color-white);
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.columns-nav a.button:hover::after {
-  border-color: var(--color-white);
+.columns-nav > div > div:last-child a.button::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  transform: rotate(45deg);
+  margin-left: 8px;
+}
+
+.columns-nav > div > div:last-child a.button:hover {
+  text-decoration: underline;
 }
 /* stylelint-enable no-descending-specificity */
 
@@ -102,13 +138,14 @@
 
   .columns-nav > div {
     flex-direction: row;
-    gap: 40px;
+    gap: 0;
+  }
+
+  .columns-nav > div > div:first-child {
+    padding: 30px 40px 30px 0;
   }
 
   .columns-nav > div > div:last-child {
-    border-top: 0;
-    border-left: 1px solid var(--color-border);
-    padding-top: 0;
-    padding-left: 40px;
+    padding: 30px 40px;
   }
 }
