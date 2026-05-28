@@ -16,6 +16,8 @@ export default function decorate(block) {
   const thumbGrid = document.createElement('div');
   thumbGrid.className = 'vp-thumb-grid';
 
+  const videoData = [];
+
   thumbItems.forEach((item, i) => {
     const thumb = document.createElement('div');
     thumb.className = `vp-thumb${i === 0 ? ' vp-thumb-active' : ''}`;
@@ -36,7 +38,16 @@ export default function decorate(block) {
       label.className = 'vp-thumb-label';
       label.textContent = title.textContent;
       thumb.append(label);
+      videoData.push({ title: title.textContent, thumb: img?.src });
+    } else {
+      videoData.push({ title: '', thumb: img?.src });
     }
+
+    thumb.addEventListener('click', () => {
+      thumbGrid.querySelectorAll('.vp-thumb').forEach((t) => t.classList.remove('vp-thumb-active'));
+      thumb.classList.add('vp-thumb-active');
+    });
+
     thumbGrid.append(thumb);
   });
 
