@@ -29,16 +29,15 @@
 }
 
 .tip-icon {
-  margin: 0 auto;
-  height: 70px;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tip-icon img {
-  max-width: 130px;
-  max-height: 70px;
+  max-width: 140px;
+  max-height: 140px;
   width: auto;
   height: auto;
 }
@@ -48,12 +47,12 @@
   font-size: 20px;
   font-weight: normal;
   line-height: 1.3;
-  margin: 10px 0;
+  margin: 0;
   color: var(--color-text-primary);
 }
 
 .tip-content p {
-  margin: 10px 0 0;
+  margin: 16px 0;
 }
 
 /* stylelint-disable no-descending-specificity */
@@ -62,27 +61,23 @@
   all: unset;
   color: var(--color-link);
   font-family: var(--font-family-heading);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline;
   cursor: pointer;
 }
 
 .tip-content a::after {
   content: '';
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-color: var(--color-link);
-  border-radius: 50%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
-  background-size: 12px;
-  background-position: center;
+  width: 13px;
+  height: 13px;
+  background-image: url("https://www.rinvoq.com/content/dam/rinvoq/images/homepage/gastro/cooking-with-uc-and-crohns/arrow-white-circle-small_r5_allviews.png");
+  background-size: 100%;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .tip-content a:hover {
@@ -103,7 +98,7 @@
   }
 
   .tip-content h2 {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 36px;
   }
 }
