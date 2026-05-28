@@ -84,17 +84,23 @@
     overflow: hidden;
   }
 
+  main > .columns-kit-container > .columns-kit-wrapper {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
   .columns-kit > div {
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 0;
     height: 170px;
     padding: 0;
     max-width: none;
   }
 
   .columns-kit > div > .columns-kit-img-col {
-    flex: 0 0 40%;
+    flex: 0 0 38%;
     height: 100%;
     overflow: visible;
     order: unset;
@@ -103,15 +109,16 @@
   }
 
   .columns-kit > div > .columns-kit-img-col img {
-    width: 100%;
+    width: 110%;
     height: auto;
     max-width: none;
     object-fit: contain;
+    margin-left: -20px;
   }
 
   .columns-kit > div > div:not(.columns-kit-img-col) {
     flex: 1;
-    padding: 20px 40px 20px 0;
+    padding: 20px 40px;
     order: unset;
   }
 }
