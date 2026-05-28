@@ -1,15 +1,15 @@
-/* Columns Kit — Promotional tout with image + CTA */
+/* Columns Kit — Doctor Visit Kit compact section */
 .columns-kit-container {
-  padding: 40px 24px;
+  padding: 0;
 }
 
 .columns-kit > div {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   max-width: 945px;
   margin: 0 auto;
-  align-items: center;
+  padding: 30px 24px;
 }
 
 .columns-kit > div > .columns-kit-img-col {
@@ -18,7 +18,7 @@
 
 .columns-kit > div > .columns-kit-img-col img {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   height: auto;
   display: block;
 }
@@ -42,9 +42,9 @@
   color: var(--color-link);
   border: 2px solid var(--color-link);
   border-radius: 5px;
-  padding: 10px 42px 10px 10px;
+  padding: 7px 42px 7px 10px;
   font-family: var(--font-family-heading);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal;
   text-decoration: none;
   position: relative;
@@ -78,39 +78,39 @@
   margin: 16px 0 0;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.columns-kit img {
-  width: 100%;
-}
-
-@media (width >= 600px) {
-  .columns-kit-container {
-    padding: 50px;
-  }
-}
-
 @media (width >= 985px) {
   .columns-kit-container {
-    padding: 50px 0;
+    padding: 0;
+    overflow: hidden;
   }
 
   .columns-kit > div {
     flex-direction: row;
     align-items: center;
     gap: 40px;
-  }
-
-  .columns-kit > div > div {
-    flex: 1;
-    order: unset;
+    height: 170px;
+    padding: 0;
+    max-width: none;
   }
 
   .columns-kit > div > .columns-kit-img-col {
-    order: unset;
     flex: 0 0 35%;
+    height: 100%;
+    overflow: hidden;
+    order: unset;
   }
 
   .columns-kit > div > .columns-kit-img-col img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .columns-kit > div > div:not(.columns-kit-img-col) {
+    flex: 1;
+    padding: 20px 40px 20px 0;
+    order: unset;
   }
 }
