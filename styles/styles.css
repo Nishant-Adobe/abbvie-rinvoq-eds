@@ -718,4 +718,208 @@ main .default-content-wrapper:has(h3#use) li {
   text-decoration: underline;
 }
 
+/* Dermatologist page — detail sections (prepping/goals/signs) */
+.default-content-wrapper [id="prepping"],
+.default-content-wrapper [id="setting"],
+.default-content-wrapper [id="signaling"] {
+  padding: 20px 0 30px;
+  border-bottom: 2px solid var(--color-accent-yellow);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.default-content-wrapper [id="signaling"] {
+  border-bottom: none;
+}
+
+.default-content-wrapper [id="prepping"] picture,
+.default-content-wrapper [id="setting"] picture,
+.default-content-wrapper [id="signaling"] picture {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.default-content-wrapper [id="prepping"] img,
+.default-content-wrapper [id="setting"] img,
+.default-content-wrapper [id="signaling"] img {
+  width: 120px;
+  height: 120px;
+}
+
+.default-content-wrapper [id="prepping"] h3,
+.default-content-wrapper [id="setting"] h3,
+.default-content-wrapper [id="signaling"] h3 {
+  font-size: 26px;
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 32px;
+  margin: 0 0 5px;
+}
+
+.default-content-wrapper [id="prepping"] > p,
+.default-content-wrapper [id="setting"] > p,
+.default-content-wrapper [id="signaling"] > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text-primary);
+  margin: 5px 0 16px;
+}
+
+.default-content-wrapper [id="prepping"] ul,
+.default-content-wrapper [id="setting"] ul,
+.default-content-wrapper [id="signaling"] ul {
+  list-style: none;
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+
+.default-content-wrapper [id="prepping"] li,
+.default-content-wrapper [id="setting"] li,
+.default-content-wrapper [id="signaling"] li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-primary);
+  margin: 0 0 5px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.default-content-wrapper [id="prepping"] li::before,
+.default-content-wrapper [id="setting"] li::before,
+.default-content-wrapper [id="signaling"] li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-accent-yellow);
+}
+
+/* Yellow-brushstroke CTA section — button styling */
+main .section.yellow-brushstroke .button-container a.button:any-link,
+main .section.yellow-brushstroke .button-container a.button {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  border-radius: 5px;
+  padding: 7px 42px 7px 10px;
+  font-size: 15px;
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+main .section.yellow-brushstroke .button-container a.button::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2390124a'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main .section.yellow-brushstroke .button-container a.button:hover {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+
+main .section.yellow-brushstroke > .default-content-wrapper p.h2 {
+  font-size: 26px;
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+/* Grey patient stories section — layout with text left, image right */
+main .section.grey > .default-content-wrapper h2 {
+  font-size: 26px;
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin: 0 0 16px;
+  max-width: 450px;
+}
+
+main .section.grey > .default-content-wrapper .button-container a.button:any-link,
+main .section.grey > .default-content-wrapper .button-container a.button {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  border-radius: 5px;
+  padding: 7px 42px 7px 10px;
+  font-size: 15px;
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+main .section.grey > .default-content-wrapper .button-container a.button::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2390124a'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main .section.grey > .default-content-wrapper .button-container a.button:hover {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+
+main .section.grey > .default-content-wrapper > picture {
+  display: block;
+  margin-top: 20px;
+}
+
+main .section.grey > .default-content-wrapper > picture img {
+  max-width: 454px;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 985px) {
+  main .section.grey > .default-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 770px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  main .section.grey > .default-content-wrapper > h2,
+  main .section.grey > .default-content-wrapper > .button-container {
+    flex: 0 0 58%;
+  }
+
+  main .section.grey > .default-content-wrapper > picture {
+    flex: 0 0 42%;
+    margin-top: 0;
+  }
+
+  main .section.grey > .default-content-wrapper > picture img {
+    max-width: none;
+    width: 430px;
+  }
+}
+
 /* stylelint-enable no-descending-specificity */
