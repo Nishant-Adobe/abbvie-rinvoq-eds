@@ -446,7 +446,7 @@ main .default-content-wrapper:has(h3#use) li {
   font-size: 16px;
   line-height: 1.375;
   color: var(--color-text-primary);
-  margin: 0 0 5px;
+  margin: 0 0 2px;
 }
 
 /* Brush highlight — yellow brushstroke behind text (e.g., "relief" in H1) */
