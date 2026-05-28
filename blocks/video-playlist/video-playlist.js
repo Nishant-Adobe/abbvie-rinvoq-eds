@@ -1,45 +1,92 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  if (rows.length < 1) return;
+  if (rows.length < 2) return;
 
-  const configRow = rows[0];
-  const cols = [...configRow.children];
+  const thumbRow = rows[0];
+  const videoRow = rows[1];
 
-  const layout = cols[0]?.textContent?.trim() || 'playlist-left';
-  const playlistId = cols[0]?.querySelectorAll('p')[1]?.textContent?.trim() || '';
-
-  const transcriptCol = cols[1];
-  const transcriptLink = transcriptCol?.querySelector('a');
+  const thumbItems = [...thumbRow.children];
+  const videoCol = videoRow.children[0];
 
   block.innerHTML = '';
-  block.classList.add(layout);
 
   const container = document.createElement('div');
-  container.className = 'video-playlist-container';
+  container.className = 'vp-container';
 
-  const placeholder = document.createElement('div');
-  placeholder.className = 'video-playlist-placeholder';
-  placeholder.innerHTML = `
-    <div class="video-playlist-player">
-      <div class="video-playlist-embed">
-        <p>Video Player</p>
-        <p class="video-playlist-id">Playlist: ${playlistId}</p>
-      </div>
-    </div>
-    <div class="video-playlist-sidebar">
-      <p class="video-playlist-sidebar-label">Video Playlist</p>
-    </div>
-  `;
+  const thumbGrid = document.createElement('div');
+  thumbGrid.className = 'vp-thumb-grid';
 
-  container.append(placeholder);
+  thumbItems.forEach((item, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = `vp-thumb${i === 0 ? ' vp-thumb-active' : ''}`;
+    const img = item.querySelector('img');
+    const title = item.querySelector('p');
+    if (img) {
+      const imgEl = document.createElement('img');
+      imgEl.src = img.src;
+      imgEl.alt = img.alt || '';
+      imgEl.loading = 'lazy';
+      thumb.append(imgEl);
+    }
+    const playIcon = document.createElement('span');
+    playIcon.className = 'vp-play-icon';
+    thumb.append(playIcon);
+    if (title) {
+      const label = document.createElement('span');
+      label.className = 'vp-thumb-label';
+      label.textContent = title.textContent;
+      thumb.append(label);
+    }
+    thumbGrid.append(thumb);
+  });
 
-  if (transcriptLink) {
-    const transcriptDiv = document.createElement('div');
-    transcriptDiv.className = 'video-playlist-transcript';
-    transcriptLink.className = 'video-playlist-transcript-link';
-    transcriptDiv.append(transcriptLink);
-    container.append(transcriptDiv);
+  container.append(thumbGrid);
+
+  const playerArea = document.createElement('div');
+  playerArea.className = 'vp-player-area';
+
+  const contentDiv = document.createElement('div');
+  contentDiv.className = 'vp-content';
+
+  const videoDiv = document.createElement('div');
+  videoDiv.className = 'vp-video';
+
+  if (videoCol) {
+    const poster = videoCol.querySelector('img');
+    const h3 = videoCol.querySelector('h3');
+    const desc = videoCol.querySelector('p');
+    const transcript = videoCol.querySelector('a');
+
+    if (poster) {
+      const posterImg = document.createElement('img');
+      posterImg.src = poster.src;
+      posterImg.alt = poster.alt || '';
+      posterImg.className = 'vp-poster';
+      const playBtn = document.createElement('div');
+      playBtn.className = 'vp-play-btn';
+      videoDiv.append(posterImg, playBtn);
+    }
+
+    if (h3) {
+      const titleEl = document.createElement('h3');
+      titleEl.textContent = h3.textContent;
+      contentDiv.append(titleEl);
+    }
+    if (desc) {
+      const descEl = document.createElement('p');
+      descEl.textContent = desc.textContent;
+      contentDiv.append(descEl);
+    }
+    if (transcript) {
+      const linkEl = document.createElement('a');
+      linkEl.href = transcript.href;
+      linkEl.textContent = transcript.textContent;
+      linkEl.className = 'vp-transcript';
+      contentDiv.append(linkEl);
+    }
   }
 
+  playerArea.append(contentDiv, videoDiv);
+  container.append(playerArea);
   block.append(container);
 }
