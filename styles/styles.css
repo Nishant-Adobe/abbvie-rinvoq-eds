@@ -271,6 +271,10 @@ main img {
   height: auto;
 }
 
+main .metadata {
+  display: none;
+}
+
 .icon {
   display: inline-block;
   height: 24px;
