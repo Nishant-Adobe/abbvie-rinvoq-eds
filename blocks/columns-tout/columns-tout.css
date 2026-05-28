@@ -1,4 +1,4 @@
-/* Columns Tout — Promotional content section */
+/* Columns Tout — Michael S. patient story section */
 .columns-tout-container {
   background-color: #f3f3f3;
   padding: 40px 24px;
@@ -16,24 +16,33 @@
   margin: 0 auto;
 }
 
-.columns-tout > div > div:first-child img:first-child {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 16px;
-}
-
-.columns-tout > div > div:first-child p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-text);
-  margin: 0 0 12px;
-}
-
+/* Quote text — bold heading font */
 .columns-tout > div > div:first-child p:first-child {
-  margin: 0 0 16px;
+  font-family: var(--font-family-heading);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin: 0 0 4px;
 }
 
+/* "BY YOURSELF" brushstroke image */
+.columns-tout > div > div:first-child img:first-child {
+  max-width: 290px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Description paragraph */
 /* stylelint-disable no-descending-specificity */
+.columns-tout > div > div:first-child p {
+  font-size: 14.4px;
+  line-height: 1.667;
+  color: var(--color-text-primary);
+  margin: 0 0 10px;
+}
+
+/* CTA button — maroon bordered with chevron */
 .columns-tout a.button {
   all: unset;
   display: inline-block;
@@ -41,9 +50,9 @@
   color: var(--color-link);
   border: 2px solid var(--color-link);
   border-radius: 5px;
-  padding: 10px 42px 10px 10px;
+  padding: 7px 42px 7px 10px;
   font-family: var(--font-family-heading);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal;
   text-decoration: none;
   position: relative;
@@ -74,9 +83,10 @@
 /* stylelint-enable no-descending-specificity */
 
 .columns-tout p.button-container {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 }
 
+/* Patient photo column */
 .columns-tout > div > div:last-child {
   position: relative;
 }
@@ -89,27 +99,34 @@
   border-radius: 0;
 }
 
-@media (width >= 600px) {
-  .columns-tout-container {
-    padding: 50px;
-  }
-}
-
 @media (width >= 985px) {
   .columns-tout-container {
-    padding: 60px 0;
+    padding: 0;
   }
 
   .columns-tout > div {
     flex-direction: row;
     align-items: center;
+    gap: 0;
+    max-width: none;
+    height: 320px;
   }
 
   .columns-tout > div > div:first-child {
     flex: 1;
+    padding: 40px 40px 40px 80px;
   }
 
   .columns-tout > div > div:last-child {
-    flex: 1;
+    flex: 0 0 45%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .columns-tout > div > div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
 }
