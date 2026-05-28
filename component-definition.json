@@ -122,25 +122,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Accordion Safety",
-                  "filter": "accordion-safety"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Accordion Safety Item",
-          "id": "accordion-safety-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Accordion Safety Item",
-                  "model": "accordion-safety-item",
-                  "summary": "Lorem Ipsum",
-                  "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat consequat dui, sit amet ...</p>"
+                  "name": "Accordion Safety"
                 }
               }
             }
@@ -214,23 +196,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Carousel Compare",
-                  "filter": "carousel-compare"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Carousel Compare Slide",
-          "id": "carousel-compare-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Carousel Compare Slide",
-                  "model": "carousel-compare-item"
+                  "name": "Carousel Compare"
                 }
               }
             }
@@ -454,8 +420,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Hero Results",
-                  "model": "hero-results"
+                  "name": "Hero Results"
                 }
               }
             }
@@ -469,8 +434,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Hero Testimonial",
-                  "model": "hero-testimonial"
+                  "name": "Hero Testimonial"
                 }
               }
             }

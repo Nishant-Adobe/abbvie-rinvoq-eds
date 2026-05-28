@@ -1,7 +1,11 @@
-/* Columns Tout — Take This Quiz section */
+/* Columns Tout — Promotional content section */
 .columns-tout-container {
   background-color: #f3f3f3;
   padding: 40px 24px;
+}
+
+.section.yellow .columns-tout-container {
+  background-color: transparent;
 }
 
 .columns-tout > div {

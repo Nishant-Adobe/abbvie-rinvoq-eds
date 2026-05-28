@@ -1,153 +1,374 @@
-.carousel-compare .carousel-compare-slides-container {
-  position: relative;
-}
-
-.carousel-compare .carousel-compare-slides,
-.carousel-compare .carousel-compare-slide-indicators {
-  list-style: none;
-  margin: 0;
+/* Carousel Compare — Before/After Image Comparison Slider */
+.carousel-compare-container {
   padding: 0;
 }
 
-.carousel-compare .carousel-compare-slides {
-  display: flex;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  overflow: scroll clip;
+.carousel-compare-container .carousel-compare-wrapper {
+  max-width: unset;
+  padding: 0;
 }
 
-.carousel-compare .carousel-compare-slides::-webkit-scrollbar {
-  display: none;
+.carousel-compare {
+  max-width: 945px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.carousel-compare .carousel-compare-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
+/* Container layout — toggle sits between slider and thumbnails */
+.compare-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  min-height: min(50vw, calc(100dvh - var(--header-height)));
-}
-
-.carousel-compare .carousel-compare-slide:has(.carousel-compare-slide-content[data-align='center']) {
   align-items: center;
 }
 
-.carousel-compare .carousel-compare-slide:has(.carousel-compare-slide-content[data-align='right']) {
-  align-items: flex-end;
+.compare-panel {
+  display: contents;
 }
 
-.carousel-compare .carousel-compare-slide .carousel-compare-slide-image picture {
+/* Toggle buttons — centered, full width between slider and thumbnails */
+.compare-toggle {
+  display: flex;
+  margin: 20px auto 10px;
+  width: 100%;
+  max-width: 765px;
+  order: 2;
+}
+
+.compare-toggle-btn {
+  flex: 1;
+  padding: 14px 28px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  border: 2px solid var(--color-link);
+  background: var(--color-white);
+  color: var(--color-link);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.compare-toggle-btn:first-child {
+  border-radius: 5px 0 0 5px;
+  border-right: 1px solid var(--color-link);
+}
+
+.compare-toggle-btn:last-child {
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid var(--color-link);
+}
+
+.compare-toggle-btn.active {
+  background: var(--color-link);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+/* Panel visibility — hidden panels hide their children */
+.compare-panel.hidden {
+  display: none;
+}
+
+/* Slider area */
+.compare-slider-area {
+  position: relative;
+  width: 100%;
+  order: 1;
+}
+
+.compare-slide {
+  display: none;
+}
+
+.compare-slide.active {
+  display: block;
+}
+
+/* The comparison slider */
+.compare-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  aspect-ratio: 1310 / 840;
+  background: #000;
+}
+
+/* Yellow label bar at top */
+.compare-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background-color: var(--color-accent-yellow);
+  z-index: 4;
+}
+
+.compare-after {
   position: absolute;
   inset: 0;
 }
 
-.carousel-compare .carousel-compare-slide .carousel-compare-slide-image picture > img {
-  height: 100%;
+.compare-after picture,
+.compare-before picture {
+  display: block;
   width: 100%;
+  height: 100%;
+}
+
+/* stylelint-disable no-descending-specificity */
+.compare-after img,
+.compare-before img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* stylelint-enable no-descending-specificity */
+
+.compare-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.compare-before picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.compare-before img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.carousel-compare .carousel-compare-slide .carousel-compare-slide-content {
-  z-index: 1;
-  margin: 68px;
-  padding: 16px;
-  color: white;
-  background-color: rgb(19 19 19 / 75%);
-  position: relative;
-  width: var(--slide-content-width, auto);
-}
-
-.carousel-compare .carousel-compare-slide-indicators {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 12px;
-  padding: 12px;
-  background-color: var(--light-color);
-  line-height: 0;
-}
-
-.carousel-compare .carousel-compare-slide-indicator button {
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-  background-color: #dadada;
-  transition: background-color 0.2s;
-}
-
-.carousel-compare .carousel-compare-slide-indicator button:disabled,
-.carousel-compare .carousel-compare-slide-indicator button:hover,
-.carousel-compare .carousel-compare-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
-}
-
-.carousel-compare .carousel-compare-navigation-buttons {
+/* Overlay labels — BEFORE (left, inside the before layer) and AFTER (right) */
+.compare-overlay {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 12px;
-  right: 12px;
+  top: 0;
+  height: 36px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  z-index: 1;
+  z-index: 5;
+}
+
+.compare-overlay-after {
+  right: 0;
+  padding-right: 12px;
+}
+
+.compare-overlay-before {
+  left: 0;
+  padding-left: 12px;
+}
+
+.compare-label {
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* Handle — dark vertical line */
+.compare-handle {
+  position: absolute;
+  top: 0;
+  left: 66%;
+  width: 4px;
+  height: 100%;
+  background: var(--color-text-primary);
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  z-index: 3;
+}
+
+.compare-handle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 50px;
+  background: rgb(37 40 42 / 85%);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+}
+
+.compare-handle-icon::before {
+  content: 'CLICK AND DRAG\ATO SEE RESULTS';
+  white-space: pre-line;
+  font-family: var(--font-family-heading);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+.compare-handle-icon::after {
+  content: '❮❮❮ ⬤ ❯❯❯';
+  font-size: 10px;
+  color: var(--color-accent-yellow);
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+/* Text below slider — grey bar with white text */
+.compare-text {
+  background-color: rgb(102 104 105);
+  padding: 12px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.compare-description {
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0 0 2px;
+}
+
+.compare-disclaimer {
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Thumbnail grid */
+.compare-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0 0;
+  max-width: 765px;
+  width: 100%;
+  order: 3;
+  justify-content: center;
+}
+
+.compare-thumb {
+  flex: 1 1 0;
+  max-width: 180px;
+  display: block;
+  position: relative;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.compare-thumb.active {
+  border-color: var(--color-link);
+}
+
+.compare-thumb picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  overflow: hidden;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.carousel-compare .carousel-compare-navigation-buttons button {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  margin: 0;
-  border-radius: 50%;
-  padding: 0;
-  background-color: rgb(19 19 19 / 25%);
-  transition: background-color 0.2s;
-}
-
-.carousel-compare .carousel-compare-navigation-buttons button:hover,
-.carousel-compare .carousel-compare-navigation-buttons button:focus-visible {
-  background-color: rgb(19 19 19 / 75%);
-}
-
-.carousel-compare .carousel-compare-navigation-buttons button::after {
+.compare-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  content: '';
-  border: 2px solid;
-  border-bottom: 0;
-  border-left: 0;
-  height: 12px;
-  width: 12px;
+}
+
+.compare-thumb-label {
   position: absolute;
-  top: 50%;
-  left: calc(50% + 2px);
-  transform: translate(-50%, -50%) rotate(-135deg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 6px 8px;
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--color-white);
+  text-align: left;
+  background: transparent;
 }
 
-.carousel-compare .carousel-compare-navigation-buttons button.slide-next::after {
-  transform: translate(-50%, -50%) rotate(45deg);
-  left: calc(50% - 2px);
+.compare-thumb-label strong {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  color: var(--color-white);
 }
 
+/* Responsive */
 @media (width >= 600px) {
-  .carousel-compare .carousel-compare-navigation-buttons {
-    left: 24px;
-    right: 24px;
+  .carousel-compare {
+    padding: 0 50px;
   }
 
-  .carousel-compare .carousel-compare-slide .carousel-compare-slide-content {
-    --slide-content-width: calc((100% - 184px) / 2);
-
-    margin: 92px;
+  .compare-toggle-btn {
+    font-size: 16px;
+    padding: 14px 24px;
   }
 
-  .carousel-compare .carousel-compare-slide .carousel-compare-slide-content[data-align='justify'] {
-    --slide-content-width: auto;
+  .compare-label {
+    font-size: 16px;
+  }
+
+  .compare-handle-icon {
+    width: 100px;
+    height: 56px;
+  }
+
+  .compare-handle-icon::before {
+    font-size: 10px;
+  }
+
+  .compare-handle-icon::after {
+    font-size: 12px;
+  }
+
+}
+
+@media (width >= 985px) {
+  .carousel-compare {
+    padding: 0;
+  }
+
+  .compare-slider::before {
+    height: 40px;
+  }
+
+  .compare-overlay {
+    height: 40px;
+  }
+
+  .compare-label {
+    font-size: 18px;
   }
 }

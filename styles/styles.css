@@ -317,6 +317,12 @@ main .section.grey {
   padding: var(--spacing-xl) 0;
 }
 
+main .section.yellow {
+  background-color: var(--color-accent-yellow);
+  margin: 0;
+  padding: var(--spacing-xl) 0;
+}
+
 /* Grey section: "Choose Your Condition" heading */
 .section.grey > .default-content-wrapper:first-child > p:first-child {
   font-size: var(--font-size-sm);
@@ -383,6 +389,25 @@ main > .section:last-of-type > .default-content-wrapper h3::after {
   background-size: 100% 10px;
   position: absolute;
   bottom: 0;
+}
+
+/* Brush highlight — yellow brushstroke behind text (e.g., "relief" in H1) */
+.brush-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.brush-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -4px;
+  right: -4px;
+  height: 12px;
+  background-image: url('https://www.rinvoq.com/content/dam/rinvoq/images/homepage/ad/homepage/global/brushstroke-underline_r6_oneSize.png');
+  background-repeat: no-repeat;
+  background-size: 110% 12px;
+  z-index: -1;
 }
 
 /* Eligibility fine-print text (small gray) */

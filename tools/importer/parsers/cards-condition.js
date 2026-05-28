@@ -32,19 +32,56 @@ export default function parse(element, { document }) {
     const link = item.querySelector('a.homepage-indication-selector-cta');
     if (!link) return; // Skip empty spacer flex items
 
-    // Clone the link to preserve its content and href
-    const linkClone = link.cloneNode(true);
+    const href = link.getAttribute('href') || '';
 
-    // Build the image cell (empty for condition cards, but required by model)
-    // Leave empty - no field hint for empty cells per hinting rules
+    // Extract structured text from spans inside the link
+    const spans = link.querySelectorAll('span');
+    let category = '';
+    let conditionName = '';
+    let subtitle = '';
+
+    if (spans.length >= 2) {
+      category = spans[0]?.textContent?.trim() || '';
+      conditionName = spans[1]?.textContent?.trim() || '';
+      if (spans.length >= 3) {
+        subtitle = spans[2]?.textContent?.trim() || '';
+      }
+    } else {
+      // Fallback: use full link text
+      conditionName = link.textContent.trim();
+    }
 
     // Build the text cell with field hint
     const textFrag = document.createDocumentFragment();
     textFrag.appendChild(document.createComment(' field:text '));
 
-    // Wrap the link content in a paragraph to preserve block structure
+    // Create link with structured content using <br> for line breaks
     const p = document.createElement('p');
-    p.appendChild(linkClone);
+    const a = document.createElement('a');
+    a.setAttribute('href', href);
+
+    if (category) {
+      const catSpan = document.createElement('span');
+      catSpan.className = 'cards-condition-category';
+      catSpan.textContent = category;
+      a.appendChild(catSpan);
+      a.appendChild(document.createElement('br'));
+    }
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'cards-condition-name';
+    nameSpan.textContent = conditionName;
+    a.appendChild(nameSpan);
+
+    if (subtitle) {
+      a.appendChild(document.createElement('br'));
+      const subSpan = document.createElement('span');
+      subSpan.className = 'cards-condition-subtitle';
+      subSpan.textContent = subtitle;
+      a.appendChild(subSpan);
+    }
+
+    p.appendChild(a);
     textFrag.appendChild(p);
 
     // Each row = [image, text] per container card model
