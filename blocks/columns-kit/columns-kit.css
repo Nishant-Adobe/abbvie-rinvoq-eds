@@ -1,9 +1,6 @@
-/* Columns Kit — Promotional tout with bleed image */
+/* Columns Kit — Promotional tout with image + CTA */
 .columns-kit-container {
-  padding: 20px 24px;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
+  padding: 40px 24px;
 }
 
 .columns-kit > div {
@@ -12,16 +9,16 @@
   gap: 24px;
   max-width: 945px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .columns-kit > div > .columns-kit-img-col {
   order: 0;
-  margin-left: calc(-1 * var(--spacing-lg));
 }
 
 .columns-kit > div > .columns-kit-img-col img {
   width: 100%;
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
   display: block;
 }
@@ -90,30 +87,17 @@
   .columns-kit-container {
     padding: 50px;
   }
-
-  .columns-kit > div > .columns-kit-img-col {
-    margin-left: -50px;
-  }
 }
 
 @media (width >= 985px) {
   .columns-kit-container {
-    padding: 20px 0;
-    min-height: 300px;
-    overflow: hidden;
-  }
-
-  main > .columns-kit-container > .columns-kit-wrapper {
-    max-width: none;
-    padding: 0 40px 0 0;
-    margin: 0;
+    padding: 50px 0;
   }
 
   .columns-kit > div {
     flex-direction: row;
     align-items: center;
-    gap: 30px;
-    max-width: none;
+    gap: 40px;
   }
 
   .columns-kit > div > div {
@@ -123,11 +107,10 @@
 
   .columns-kit > div > .columns-kit-img-col {
     order: unset;
-    margin-left: 0;
-    flex: 0 0 40%;
+    flex: 0 0 35%;
   }
 
   .columns-kit > div > .columns-kit-img-col img {
-    max-height: none;
+    max-width: 100%;
   }
 }
