@@ -885,7 +885,7 @@ main .section.grey > .default-content-wrapper .button-container a.button:hover {
   color: var(--color-white);
 }
 
-/* Grey patient stories section — image below text on mobile/tablet */
+/* Grey patient stories section — text left, image right */
 main .section.grey > .default-content-wrapper > picture {
   display: block;
   margin-top: 20px;
@@ -893,36 +893,36 @@ main .section.grey > .default-content-wrapper > picture {
 }
 
 main .section.grey > .default-content-wrapper > picture img {
-  max-width: 240px;
+  max-width: 300px;
   width: 100%;
   height: auto;
 }
 
 @media (width >= 985px) {
+  main .section.grey > .default-content-wrapper > picture {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
+
+  main .section.grey > .default-content-wrapper > picture img {
+    max-width: none;
+    width: 430px;
+  }
+
   main .section.grey > .default-content-wrapper:has(> picture) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    position: relative;
     max-width: 770px;
     margin: 0 auto;
     overflow: hidden;
     min-height: 320px;
+    padding-right: 300px;
   }
 
-  main .section.grey > .default-content-wrapper:has(> picture) > h2,
-  main .section.grey > .default-content-wrapper:has(> picture) > .button-container {
-    flex: 0 0 58%;
-  }
-
-  main .section.grey > .default-content-wrapper:has(> picture) > picture {
-    flex: 0 0 42%;
-    margin-top: 0;
-    text-align: right;
-  }
-
-  main .section.grey > .default-content-wrapper:has(> picture) > picture img {
-    max-width: none;
-    width: 430px;
+  main .section.grey > .default-content-wrapper > h2 {
+    max-width: 450px;
   }
 }
 
