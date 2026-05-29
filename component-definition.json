@@ -238,9 +238,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Efficacy",
                   "columns": "3",
                   "rows": "1"
                 }
@@ -254,9 +253,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Kit",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -270,9 +268,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Nav",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -286,9 +283,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Poll",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -302,9 +298,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Safety",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -318,9 +313,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Stories",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -334,9 +328,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Tout",
                   "columns": "2",
                   "rows": "1"
                 }
@@ -350,9 +343,8 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Columns Value",
                   "columns": "2",
                   "rows": "1"
                 }
